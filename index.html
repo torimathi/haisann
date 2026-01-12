@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặc Sản Đà Nẵng - Hải Sản Ngon</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">🦑 Đặc Sản Đà Nẵng</div>
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+                    <button class="btn btn-primary" onclick="searchProducts()">Tìm kiếm</button>
+                </div>
+                <a href="cart.html" class="cart-button">
+                    <span class="cart-icon">🛒</span>
+                    <span>Giỏ hàng</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="category-filter">
+                <button class="category-btn active" onclick="filterCategory('all', this)">Tất cả</button>
+                <button class="category-btn" onclick="filterCategory('Mực khô', this)">Mực khô</button>
+                <button class="category-btn" onclick="filterCategory('Hải sản ăn liền', this)">Hải sản ăn liền</button>
+                <button class="category-btn" onclick="filterCategory('Bò khô', this)">Bò khô</button>
+                <button class="category-btn" onclick="filterCategory('Trà & Cà phê', this)">Trà & Cà phê</button>
+                <button class="category-btn" onclick="filterCategory('Bánh kẹo', this)">Bánh kẹo</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">Sản phẩm đặc sản</h2>
+            <div id="productsGrid" class="products-grid"></div>
+            <div id="emptyState" class="empty-state" style="display: none;">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"></path>
+                </svg>
+                <h3>Không tìm thấy sản phẩm</h3>
+                <p>Thử tìm kiếm với từ khóa khác</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detail Modal -->
+    <div id="detailModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="detailTitle">Chi tiết sản phẩm</h2>
+                <button class="close-btn" onclick="closeModal('detailModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img id="detailImage" class="modal-image" src="" alt="">
+                <div class="detail-info">
+                    <h3 id="detailName" style="margin-bottom: 15px;"></h3>
+                    <p><strong>Giá:</strong> <span id="detailPrice" style="color: #c7252e; font-size: 24px; font-weight: bold;"></span></p>
+                    <p><strong>Danh mục:</strong> <span id="detailCategory"></span></p>
+                    <p><strong>Trạng thái:</strong> <span id="detailStock"></span></p>
+                    <p><strong>Mô tả:</strong> <span id="detailDescription"></span></p>
+                    
+                    <div style="margin-top: 30px; display: flex; gap: 15px; align-items: center;">
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <button class="qty-btn" onclick="changeQuantity(-1)">−</button>
+                            <input type="number" id="modalQuantity" value="1" min="1" readonly style="width: 60px; text-align: center; border: 2px solid #ddd; border-radius: 5px; padding: 8px;">
+                            <button class="qty-btn" onclick="changeQuantity(1)">+</button>
+                        </div>
+                        <button class="btn btn-add-cart" onclick="addToCartFromModal()" style="flex: 1;">
+                            🛒 Thêm vào giỏ hàng
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh toán - Đặc Sản Đà Nẵng</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">🦑 Đặc Sản Đà Nẵng</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Checkout Section -->
+    <section class="checkout-section">
+        <div class="container">
+            <h1 class="page-title">Thanh toán</h1>
+            
+            <div class="checkout-grid">
+                <!-- Left: Form thông tin -->
+                <div class="checkout-form">
+                    <h2>Thông tin giao hàng</h2>
+                    <form id="checkoutForm">
+                        <div class="form-group">
+                            <label>Họ và tên *</label>
+                            <input type="text" id="fullName" required placeholder="Nguyễn Văn A">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Số điện thoại *</label>
+                            <input type="tel" id="phone" required placeholder="0912345678">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Địa chỉ *</label>
+                            <input type="text" id="address" required placeholder="Số nhà, tên đường">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Thành phố *</label>
+                                <input type="text" id="city" required placeholder="Đà Nẵng">
+                            </div>
+                            <div class="form-group">
+                                <label>Quận/Huyện *</label>
+                                <input type="text" id="district" required placeholder="Hải Châu">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Ghi chú</label>
+                            <textarea id="note" rows="3" placeholder="Ghi chú thêm về đơn hàng (tùy chọn)"></textarea>
+                        </div>
+
+                        <h2 style="margin-top: 30px;">Phương thức thanh toán</h2>
+                        
+                        <div class="payment-methods">
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="cod" checked>
+                                <div class="payment-content">
+                                    <span class="payment-icon">💵</span>
+                                    <div>
+                                        <strong>Thanh toán khi nhận hàng (COD)</strong>
+                                        <p>Thanh toán bằng tiền mặt khi nhận hàng</p>
+                                    </div>
+                                </div>
+                            </label>
+                            
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="qr">
+                                <div class="payment-content">
+                                    <span class="payment-icon">📱</span>
+                                    <div>
+                                        <strong>Chuyển khoản qua QR Code</strong>
+                                        <p>Quét mã QR để thanh toán ngay</p>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div id="qrCodeSection" class="qr-section" style="display: none;">
+                            <h3>Quét mã QR để thanh toán</h3>
+                            <img src="https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=300" alt="QR Code" class="qr-image">
+                            <p style="text-align: center; margin-top: 10px; color: #666;">
+                                <strong>Ngân hàng:</strong> Vietcombank<br>
+                                <strong>Số tài khoản:</strong> 0123456789<br>
+                                <strong>Chủ tài khoản:</strong> NGUYEN VAN A<br>
+                                <strong>Nội dung:</strong> <span id="transferContent"></span>
+                            </p>
+                        </div>
+
+                        <button type="submit" class="btn btn-checkout">
+                            Hoàn tất đơn hàng
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Right: Tóm tắt đơn hàng -->
+                <div class="order-summary">
+                    <h2>Đơn hàng của bạn</h2>
+                    <div id="orderItems" class="order-items"></div>
+                    
+                    <div class="order-total">
+                        <div class="total-row">
+                            <span>Tạm tính:</span>
+                            <span id="subtotal">0₫</span>
+                        </div>
+                        <div class="total-row">
+                            <span>Phí vận chuyển:</span>
+                            <span id="shipping">30.000₫</span>
+                        </div>
+                        <div class="total-row total-final">
+                            <span>Tổng cộng:</span>
+                            <span id="finalTotal">0₫</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content success-modal">
+            <div class="success-icon">✓</div>
+            <h2>Đặt hàng thành công!</h2>
+            <p>Cảm ơn bạn đã đặt hàng. Chúng tôi sẽ liên hệ với bạn sớm nhất.</p>
+            <p><strong>Mã đơn hàng:</strong> <span id="orderCode"></span></p>
+            <a href="index.html" class="btn btn-primary">Tiếp tục mua sắm</a>
+        </div>
+    </div>
+
+    <script src="checkout.js"></script>
+</body>
+</html>
