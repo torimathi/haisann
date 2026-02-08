@@ -12,9 +12,40 @@
         <div class="container">
             <div class="header-content">
                 <a href="index.html" class="logo">🦑 Đặc Sản Đà Nẵng</a>
+                <div class="search-bar">
+                    <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                    <button class="btn btn-primary">Tìm kiếm</button>
+                </div>
+                <a href="cart.html" class="cart-button">
+                    <span class="cart-icon">🛒</span>
+                    <span>Giỏ hàng</span>
+                </a>
             </div>
         </div>
     </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Trang chủ</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link">Danh mục sản phẩm ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html">Tất cả sản phẩm</a></li>
+                        <li><a href="index.html">Mực khô</a></li>
+                        <li><a href="index.html">Hải sản ăn liền</a></li>
+                        <li><a href="index.html">Bò khô</a></li>
+                        <li><a href="index.html">Trà & Cà phê</a></li>
+                        <li><a href="index.html">Bánh kẹo</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="nav-link">Về chúng tôi</a></li>
+                <li><a href="#" class="nav-link">Tin tức</a></li>
+                <li><a href="#" class="nav-link">Liên hệ</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <!-- Checkout Section -->
     <section class="checkout-section">
@@ -91,7 +122,11 @@
                                 <strong>Số tài khoản:</strong> 0123456789<br>
                                 <strong>Chủ tài khoản:</strong> NGUYEN VAN A<br>
                                 <strong>Nội dung:</strong> <span id="transferContent"></span>
-                            </p>
+                                                            <div style="background-color: #fffbea; padding: 12px; border-left: 4px solid #ffa500; border-radius: 4px; margin-top: 15px;">
+                                <p style="margin: 0; color: #856404; font-size: 14px;">
+                                     Nhân Viên Sẽ Liên Hệ Sau Khi Đơn Hàng Chuyển Khoản Thành Công. 
+                                </p>
+                            </div>                            </p>
                         </div>
 
                         <button type="submit" class="btn btn-checkout">
@@ -124,6 +159,19 @@
         </div>
     </section>
 
+    <!-- Floating Contact Icons -->
+    <div class="floating-contact">
+        <a href="https://m.me/yourpage" target="_blank" class="contact-icon messenger-icon" title="Chat với chúng tôi">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 3 .97 4.29L2 22l6.29-.97C9.95 21.61 10.97 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.41 0-2.73-.36-3.88-.99l-.28-.15-2.89.44.44-2.89-.15-.27C4.46 14.73 4 13.38 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8z"/><circle cx="12" cy="12" r="1"/><circle cx="7" cy="12" r="1"/><circle cx="17" cy="12" r="1"/></svg>
+        </a>
+        <a href="mailto:info@dacsandanang.vn" class="contact-icon email-icon" title="Gửi email">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+        <a href="tel:1900xxxx" class="contact-icon phone-icon" title="Gọi cho chúng tôi">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        </a>
+    </div>
+
     <!-- Success Modal -->
     <div id="successModal" class="modal">
         <div class="modal-content success-modal">
@@ -134,6 +182,62 @@
             <a href="index.html" class="btn btn-primary">Tiếp tục mua sắm</a>
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>🦑 Đặc Sản Đà Nẵng</h3>
+                    <p>Chuyên cung cấp các sản phẩm đặc sản Đà Nẵng chất lượng cao, được chọn lọc kỹ càng từ những người làm nghề uy tín.</p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook">📘</a>
+                        <a href="#" title="Instagram">📷</a>
+                        <a href="#" title="YouTube">📺</a>
+                        <a href="#" title="Zalo">💬</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Về chúng tôi</h4>
+                    <ul>
+                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="#">Tin tức</a></li>
+                        <li><a href="#">Tuyển dụng</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Hỗ trợ khách hàng</h4>
+                    <ul>
+                        <li><a href="#">Hướng dẫn đặt hàng</a></li>
+                        <li><a href="#">Chính sách đổi trả</a></li>
+                        <li><a href="#">Phương thức thanh toán</a></li>
+                        <li><a href="#">Câu hỏi thường gặp</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Thông tin liên hệ</h4>
+                    <ul class="contact-info">
+                        <li>📍 123 Đường Lê Duẩn, Đà Nẵng</li>
+                        <li>📞 Hotline: <strong>1900 xxxx</strong></li>
+                        <li>✉️ Email: info@dacsandanang.vn</li>
+                        <li>🕐 Giờ làm việc: 8:00 - 22:00</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Đặc Sản Đà Nẵng. Bảo lưu mọi quyền.</p>
+                <div class="footer-links">
+                    <a href="#">Chính sách bảo mật</a>
+                    <a href="#">Điều khoản sử dụng</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="checkout.js"></script>
 </body>
