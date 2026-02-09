@@ -479,4 +479,6 @@ function goToPage(page) {
         block: 'start'
     });
 }
+
+
 renderProductsWithPagination(products);

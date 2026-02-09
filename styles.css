@@ -3197,3 +3197,81 @@ footer {
     border-color: transparent;
     box-shadow: 0 6px 16px rgba(255,122,0,0.4);
 }
+@media (max-width: 992px) {
+    .hero-wrap {
+        grid-template-columns: 1fr;
+    }
+
+    .category-sidebar {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(-10px);
+        pointer-events: none;
+        transition: all 0.35s ease;
+    }
+
+    .home-hero.is-collapsed .category-sidebar {
+        max-height: 80vh;             /* Cho phép cao tới 80% màn hình */
+        overflow-y: auto;             /* Scroll nếu nhiều item */
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+        margin-bottom: 12px;
+        -webkit-overflow-scrolling: touch; /* Scroll mượt iOS */
+    }
+
+    .category-list li a {
+        padding: 12px 14px;
+        font-size: 15px;
+    }
+
+    .hero-banner img {
+        min-height: 180px;
+    }
+}
+.category-list li {
+    border-bottom: 1px dashed #eee;
+}
+
+.category-list li:last-child {
+    border-bottom: none;
+}
+.category-trigger .menu-icon {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.home-hero.is-collapsed .category-trigger .menu-icon {
+    transform: rotate(90deg);
+}
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+    .hero-wrap {
+        flex-direction: column;
+    }
+
+    /* Mặc định chỉ hiện banner */
+    .category-sidebar {
+        display: none;
+    }
+
+    .hero-banner img {
+        height: 180px;
+    }
+
+    /* Khi mở danh mục */
+    .category-sidebar.is-mobile-open {
+        display: block;
+        animation: fadeInUp 0.25s ease;
+    }
+
+    .hero-banner.is-mobile-hidden {
+        display: none;
+    }
+}
+
+@keyframes fadeInUp {
+    from {opacity: 0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
