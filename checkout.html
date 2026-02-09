@@ -5,47 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thanh toán - Đặc Sản Đà Nẵng</title>
     <link rel="stylesheet" href="styles.css">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <a href="index.html" class="logo">🦑 Đặc Sản Đà Nẵng</a>
-                <div class="search-bar">
-                    <input type="text" placeholder="Tìm kiếm sản phẩm...">
-                    <button class="btn btn-primary">Tìm kiếm</button>
-                </div>
-                <a href="cart.html" class="cart-button">
-                    <span class="cart-icon">🛒</span>
-                    <span>Giỏ hàng</span>
+    <header class="vgift-header cart-header">
+    <div class="top-bar">
+        <div class="container top-content">
+            <div class="brand">
+                <a href="index.html" class="brand-link">
+                    <img src="images/logo.png" alt="Vgift" class="logo-img">
+                    <div class="brand-tagline">Taste The Specialty</div>
                 </a>
             </div>
-        </div>
-    </header>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Trang chủ</a></li>
-                <li class="dropdown">
-                    <a href="#" class="nav-link">Danh mục sản phẩm ▾</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="index.html">Tất cả sản phẩm</a></li>
-                        <li><a href="index.html">Mực khô</a></li>
-                        <li><a href="index.html">Hải sản ăn liền</a></li>
-                        <li><a href="index.html">Bò khô</a></li>
-                        <li><a href="index.html">Trà & Cà phê</a></li>
-                        <li><a href="index.html">Bánh kẹo</a></li>
-                    </ul>
+            <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Tìm Kiếm Sản Phẩm ...">
+                    <button onclick="searchProducts()">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+
+           <div class="hotline">
+                        <span class="hotline-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M2.25 4.5l3.6-.9a1.5 1.5 0 0 1 1.7.9l1.6 3.8a1.5 1.5 0 0 1-.4 1.7l-1.8 1.5a12 12 0 0 0 5.4 5.4l1.5-1.8a1.5 1.5 0 0 1 1.7-.4l3.8 1.6a1.5 1.5 0 0 1 .9 1.7l-.9 3.6a1.5 1.5 0 0 1-1.5 1.1C9.3 23.1.9 14.7 1.1 5.9A1.5 1.5 0 0 1 2.25 4.5z" />
+                            </svg>
+                        </span>
+
+
+                        <div class="hotline-text">
+                            <small>Hotline</small>
+                            <strong>0898.200.123</strong>
+                        </div>
+                    </div>
+        </div>
+    </div>
+
+    <nav class="main-nav cart-nav">
+        <div class="container nav-content">
+            <ul class="nav-left">
+                <li>
+                 <a href="cart.html" class="back-shop back-shop-fancy">
+    <span class="back-icon">
+        <i class="fa-solid fa-chevron-left"></i>
+    </span>
+    <span>Trở về giỏ hàng</span>
+</a>
+
+
                 </li>
-                <li><a href="#" class="nav-link">Về chúng tôi</a></li>
-                <li><a href="#" class="nav-link">Tin tức</a></li>
-                <li><a href="#" class="nav-link">Liên hệ</a></li>
+            </ul>
+
+            <ul class="nav-right">
+                <li class="nav-highlight"><a href="#">SET QUÀ TẾT 2026</a></li>
+                <li><a href="#">Hướng dẫn mua</a></li>
+                <li class="active"><a href="cart.html">Thanh toán</a></li>
+                <li><a href="#">Vận chuyển</a></li>
+                <li><a href="#">Liên hệ</a></li>
             </ul>
         </div>
     </nav>
+</header>
+
+  
 
     <!-- Checkout Section -->
     <section class="checkout-section">
@@ -94,8 +121,9 @@
                             <label class="payment-option">
                                 <input type="radio" name="payment" value="cod" checked>
                                 <div class="payment-content">
-                                    <span class="payment-icon">💵</span>
-                                    <div>
+<span class="payment-icon">
+    <i class="bi bi-cash-stack"></i>
+</span>                                    <div>
                                         <strong>Thanh toán khi nhận hàng (COD)</strong>
                                         <p>Thanh toán bằng tiền mặt khi nhận hàng</p>
                                     </div>
@@ -105,8 +133,9 @@
                             <label class="payment-option">
                                 <input type="radio" name="payment" value="qr">
                                 <div class="payment-content">
-                                    <span class="payment-icon">📱</span>
-                                    <div>
+<span class="payment-icon">
+    <i class="bi bi-qr-code-scan"></i>
+</span>                                    <div>
                                         <strong>Chuyển khoản qua QR Code</strong>
                                         <p>Quét mã QR để thanh toán ngay</p>
                                     </div>
@@ -184,21 +213,24 @@
     </div>
 
     <!-- Footer -->
-    <footer>
+  <footer>
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-content container">
                 <div class="footer-column">
-                    <h3>🦑 Đặc Sản Đà Nẵng</h3>
-                    <p>Chuyên cung cấp các sản phẩm đặc sản Đà Nẵng chất lượng cao, được chọn lọc kỹ càng từ những người làm nghề uy tín.</p>
+                    <h3>Đặc Sản Đà Nẵng</h3>
+                    <p>Chuyên cung cấp các sản phẩm đặc sản Đà Nẵng chất lượng cao, được chọn lọc kỹ càng từ những người
+                        làm nghề uy tín.</p>
                     <div class="social-links">
-                        <a href="#" title="Facebook">📘</a>
-                        <a href="#" title="Instagram">📷</a>
-                        <a href="#" title="YouTube">📺</a>
-                        <a href="#" title="Zalo">💬</a>
+                        <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" title="Zalo"><i class="fa-solid fa-comment-dots"></i></a>
                     </div>
+
+
                 </div>
-                
-                <div class="footer-column">
+
+                <div class="footer-column container">
                     <h4>Về chúng tôi</h4>
                     <ul>
                         <li><a href="#">Giới thiệu</a></li>
@@ -207,8 +239,8 @@
                         <li><a href="#">Liên hệ</a></li>
                     </ul>
                 </div>
-                
-                <div class="footer-column">
+
+                <div class="footer-column container">
                     <h4>Hỗ trợ khách hàng</h4>
                     <ul>
                         <li><a href="#">Hướng dẫn đặt hàng</a></li>
@@ -217,18 +249,19 @@
                         <li><a href="#">Câu hỏi thường gặp</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-column">
                     <h4>Thông tin liên hệ</h4>
                     <ul class="contact-info">
-                        <li>📍 123 Đường Lê Duẩn, Đà Nẵng</li>
-                        <li>📞 Hotline: <strong>1900 xxxx</strong></li>
-                        <li>✉️ Email: info@dacsandanang.vn</li>
-                        <li>🕐 Giờ làm việc: 8:00 - 22:00</li>
+                        <li><i class="fa-solid fa-location-dot"></i> 123 Đường Lê Duẩn, Đà Nẵng</li>
+                        <li><i class="fa-solid fa-phone"></i> Hotline: <strong>1900 xxxx</strong></li>
+                        <li><i class="fa-solid fa-envelope"></i> Email: info@dacsandanang.vn</li>
+                        <li><i class="fa-regular fa-clock"></i> Giờ làm việc: 8:00 - 22:00</li>
                     </ul>
+
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <p>&copy; 2024 Đặc Sản Đà Nẵng. Bảo lưu mọi quyền.</p>
                 <div class="footer-links">

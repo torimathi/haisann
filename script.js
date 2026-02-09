@@ -4,7 +4,7 @@ let products = [
         name: 'Mực Câu Khô 3 Nắng - Đại 500G',
         price: 985000,
         category: 'Mực khô',
-        image: 'https://images.unsplash.com/photo-1599084993091-1cb5c0721cc6?w=400',
+        image: 'https://img.lazcdn.com/g/p/f957309b81c73835d13b2dca3cf5a9fa.jpg_720x720q80.jpg',
         stock: 'Hết hàng',
         description: 'Mực câu khô cao cấp, phơi 3 nắng tự nhiên, thơm ngon đặc biệt'
     },
@@ -13,7 +13,7 @@ let products = [
         name: 'Mực Rim Me Truyền Thống - Hũ 180g',
         price: 105000,
         category: 'Hải sản ăn liền',
-        image: 'https://images.unsplash.com/photo-1585032226651-759b368d7246?w=400',
+        image: 'https://vigift.vn/wp-content/uploads/2021/06/muc-rim-me-da-nang-2-min-1.png',
         stock: 'Còn hàng',
         description: 'Mực rim me theo công thức truyền thống, vị ngọt đậm đà'
     },
@@ -21,39 +21,222 @@ let products = [
         id: 3,
         name: 'Chả Bò Đà Nẵng - 500g',
         price: 195000,
-        category: 'Bò khô',
-        image: 'https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=400',
+        category: 'Quà Lưu Niệm',
+        image: 'https://dacsanlamqua.com/wp-content/uploads/2017/05/cha-bo-da-nang.jpg',
         stock: 'Còn hàng',
         description: 'Chả bò Đà Nẵng đặc sản, thơm ngon, chất lượng cao'
     },
     {
         id: 4,
-        name: 'Trà Sâm Dứa Hoa Lài - hũ 150G',
+        name: 'Trà Sâm Dứa Hoa Lài - Hũ 150g',
         price: 55000,
         category: 'Trà & Cà phê',
         image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400',
         stock: 'Còn hàng',
-        description: 'Trà sâm dứa hoa lài thơm mát, giải nhiệt tuyệt vời'
+        description: 'Trà sâm dứa hoa lài thơm mát, giải nhiệt'
     },
     {
         id: 5,
         name: 'Mè Xửng Huế Thượng Hạng - 250g',
         price: 40000,
         category: 'Bánh kẹo',
-        image: 'https://images.unsplash.com/photo-1599785209796-786432b228bc?w=400',
+        image: 'https://quahueonline.com/wp-content/uploads/2019/12/%C4%90%E1%BA%B7c-s%E1%BA%A3n-Hu%E1%BA%BF-M%C3%A8-x%E1%BB%ADng-Thi%C3%AAn-H%C6%B0%C6%A1ng-th%C6%B0%E1%BB%A3ng-h%E1%BA%A1ng-T%C3%BAi-450gr-4.jpg',
         stock: 'Còn hàng',
-        description: 'Mè xửng Huế truyền thống, thơm ngon, giòn tan'
+        description: 'Mè xửng Huế truyền thống'
     },
     {
         id: 6,
-        name: 'Cá Bò Khô - 400G',
+        name: 'Cá Bò Khô - 400g',
         price: 170000,
         category: 'Mực khô',
-        image: 'https://images.unsplash.com/photo-1599084993091-1cb5c0721cc6?w=400',
+        image: 'https://quabinhdinh.vn/wp-content/uploads/2021/03/ca-bo.jpg',
         stock: 'Còn hàng',
-        description: 'Cá bò khô thơm ngon, chất lượng cao'
-    }
+        description: 'Cá bò khô đậm vị biển'
+    },
+    // Thêm 20 sản phẩm tiếp theo
+{
+    id: 7,
+    name: 'Tôm Khô Cà Mau - 300g',
+    price: 285000,
+    category: 'Mực khô',
+    image: 'https://vietair.com.vn/Media/Images/tom-kho-ca-mau.jpg',
+    stock: 'Còn hàng',
+    description: 'Tôm khô Cà Mau ngọt thịt, phơi nắng tự nhiên'
+},
+{
+    id: 8,
+    name: 'Mực Một Nắng Phan Thiết - 500g',
+    price: 365000,
+    category: 'Mực khô',
+    image: 'https://danviet-24h.ex-cdn.com/files/upload/1-2021/images/2021-03-22/4-1616396732-810-width629height377.jpg',
+    stock: 'Còn hàng',
+    description: 'Mực một nắng dày thịt, nướng than cực ngon'
+},
+{
+    id: 9,
+    name: 'Khô Gà Lá Chanh - Hũ 200g',
+    price: 89000,
+    category: 'Bò khô',
+    image: 'https://traicaysaynutfarm.com/wp-content/uploads/2021/03/z3382733374647_5728c51392b3a008fa33c289d2f396ae.jpg',
+    stock: 'Còn hàng',
+    description: 'Khô gà xé sợi, vị cay nhẹ, thơm lá chanh'
+},
+{
+    id: 10,
+    name: 'Cá Thiều Que Cay - 250g',
+    price: 75000,
+    category: 'Mực khô',
+    image: 'https://vigift.vn/wp-content/uploads/2021/12/ca-thieu-que-dac-san-da-nang-lam-qua-1.png',
+    stock: 'Còn hàng',
+    description: 'Cá thiều tẩm gia vị cay mặn ngọt hấp dẫn'
+},
+{
+    id: 11,
+    name: 'Trà Sen Tây Hồ - Hộp 100g',
+    price: 120000,
+    category: 'Trà & Cà phê',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbuSAtcGFU5kgl3UMFshZk-9OKhMIGijLLng&s',
+    stock: 'Còn hàng',
+    description: 'Trà sen ướp hoa sen tự nhiên, hương thơm thanh tao'
+},
+{
+    id: 12,
+    name: 'Cà Phê Rang Xay Đà Lạt - 500g',
+    price: 165000,
+    category: 'Trà & Cà phê',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC0H5EcBCqSBqUoBTTnwa6gQWdhnvFCc7Sqg&s',
+    stock: 'Còn hàng',
+    description: 'Cà phê rang mộc, vị đậm đà, hậu ngọt'
+},
+{
+    id: 13,
+    name: 'Bánh Dừa Nướng Bến Tre - 300g',
+    price: 45000,
+    category: 'Bánh kẹo',
+    image: 'https://minhcaumart.vn//media/com_eshop/products/resized/8936063781025-500x500.webp',
+    stock: 'Còn hàng',
+    description: 'Bánh dừa nướng giòn rụm, thơm béo'
+},
+{
+    id: 14,
+    name: 'Kẹo Dừa Non Bến Tre - 250g',
+    price: 38000,
+    category: 'Bánh kẹo',
+    image: 'https://dacsanxudua.com/wp-content/uploads/2014/08/keo-dua-non.png?4f7732&4f7732',
+    stock: 'Còn hàng',
+    description: 'Kẹo dừa mềm, ít ngọt, không dính răng'
+},
+{
+    id: 15,
+    name: 'Khô Bò Sợi Cay - 200g',
+    price: 135000,
+    category: 'Bò khô',
+    image: 'https://file.hstatic.net/200000700229/article/cach-lam-bo-kho-soi-thumb_685640ffe3114211a9e0b9caf36e510d.jpg',
+    stock: 'Còn hàng',
+    description: 'Bò khô sợi mềm, vị cay ngọt đậm đà'
+},
+{
+    id: 16,
+    name: 'Bò Khô Miếng Lớn - 300g',
+    price: 215000,
+    category: 'Bò khô',
+    image: 'https://ann.com.vn/wp-content/uploads/22742_bo-kho-da-nang-01-1629271455_20241113154310-5.jpg',
+    stock: 'Còn hàng',
+    description: 'Bò khô miếng lớn, dai mềm vừa phải'
+},
+{
+    id: 17,
+    name: 'Cá Chỉ Vàng Khô - 400g',
+    price: 125000,
+    category: 'Mực khô',
+    image: 'https://quabinhdinh.vn/wp-content/uploads/2021/03/ca-chi-vang.jpg',
+    stock: 'Còn hàng',
+    description: 'Cá chỉ vàng khô, nướng ăn cực bắt bia'
+},
+{
+    id: 18,
+    name: 'Khô Mực Tẩm Gia Vị - 250g',
+    price: 155000,
+    category: 'Mực khô',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlsxXu2VZAv-aRNSAdncU3eaWOAOVpbLtrUw&s',
+    stock: 'Còn hàng',
+    description: 'Mực tẩm gia vị cay ngọt, ăn liền tiện lợi'
+},
+{
+    id: 19,
+    name: 'Hạt Điều Rang Muối Bình Phước - 500g',
+    price: 185000,
+    category: 'Bánh kẹo',
+    image: 'https://quaqueviet.vn/upload/imgproduct/hat-dieu-rang-muoi-1-min.jpg',
+    stock: 'Còn hàng',
+    description: 'Hạt điều rang muối béo bùi, giàu dinh dưỡng'
+},
+{
+    id: 20,
+    name: 'Mít Sấy Giòn - 200g',
+    price: 55000,
+    category: 'Bánh kẹo',
+    image: 'https://traicaysaynutfarm.com/wp-content/uploads/2021/03/mit-1.jpg',
+    stock: 'Còn hàng',
+    description: 'Mít sấy giòn rụm, giữ vị ngọt tự nhiên'
+},
+{
+    id: 21,
+    name: 'Chuối Sấy Dẻo - 250g',
+    price: 48000,
+    category: 'Bánh kẹo',
+    image: 'https://traicayhatsay.com/kcfinder/upload/images/chuoi-say-deo-dac-biet-trai-cay-hat-say-com-1.jpg',
+    stock: 'Còn hàng',
+    description: 'Chuối sấy dẻo, ít đường, ăn vặt healthy'
+},
+{
+    id: 22,
+    name: 'Khô Cá Lóc Đồng - 500g',
+    price: 295000,
+    category: 'Mực khô',
+    image: 'https://dacsanmuicamau.com/static/product/2023/0701/kho-ca-loc-cung-43-236.jpg',
+    stock: 'Còn hàng',
+    description: 'Cá lóc đồng phơi nắng tự nhiên, thơm ngon'
+},
+{
+    id: 23,
+    name: 'Trà Gừng Mật Ong - Hộp 20 gói',
+    price: 75000,
+    category: 'Trà & Cà phê',
+    image: 'https://goldenfarm.com.vn/wp-content/uploads/2024/02/tra-gung-mat-ong-vi-a-450g-scaled.webp',
+    stock: 'Còn hàng',
+    description: 'Trà gừng mật ong giúp ấm bụng, dễ uống'
+},
+{
+    id: 24,
+    name: 'Cà Phê Sữa Hòa Tan - Hộp 20 gói',
+    price: 69000,
+    category: 'Trà & Cà phê',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq4lP42RLqZRsypuS-9in2AgWkvesk4SPkuw&s',
+    stock: 'Còn hàng',
+    description: 'Cà phê sữa hòa tan tiện lợi, vị đậm đà'
+},
+{
+    id: 25,
+    name: 'Khô Heo Cháy Tỏi - 200g',
+    price: 99000,
+    category: 'Hải sản ăn liền',
+    image: 'https://cdn.tgdd.vn/2021/03/CookRecipe/Avatar/kho-heo-chay-toi-thumbnail.jpg',
+    stock: 'Còn hàng',
+    description: 'Khô heo cháy tỏi thơm nồng, ăn vặt cực cuốn'
+},
+{
+    id: 26,
+    name: 'Cá Mai Tẩm Mè - 250g',
+    price: 115000,
+    category: 'Hải sản ăn liền',
+    image: 'https://dacsandananghongocha.com/wp-content/uploads/2018/11/C%C3%81-MAI-T%E1%BA%A8M-M%C3%88-3.jpg',
+    stock: 'Còn hàng',
+    description: 'Cá mai tẩm mè rang, giòn ngon, đậm vị'
+}
+
 ];
+
 
 let currentCategory = 'all';
 let currentProductId = null;
@@ -120,7 +303,9 @@ function renderProducts(productsToRender = products) {
                 <h3 class="product-name">${product.name}</h3>
                 <div class="product-price">${formatPrice(product.price)}</div>
                 <div class="product-stock ${product.stock === 'Hết hàng' ? 'out-of-stock' : ''}">
-                    ${product.stock === 'Hết hàng' ? '❌ Hết hàng' : '✅ Còn hàng'}
+${product.stock === 'Hết hàng' 
+    ? '<i class="fa-solid fa-circle-xmark"></i> Hết hàng' 
+    : '<i class="fa-solid fa-circle-check"></i> Còn hàng'}
                 </div>
             </div>
         </div>
@@ -189,41 +374,36 @@ function addToCartFromModal() {
 
 // Filter by category
 function filterCategory(category, event) {
-    if (event) {
-        event.preventDefault();
-    }
-    
-    currentCategory = category;
+    if (event) event.preventDefault();
+    currentPage = 1;
 
     if (category === 'all') {
-        renderProducts(products);
+        currentProductList = products;
     } else {
-        const filtered = products.filter(p => p.category === category);
-        renderProducts(filtered);
+        currentProductList = products.filter(p => p.category === category);
     }
 
-    // Scroll to products section
-    document.querySelector('.products-section').scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-    });
+    renderProductsWithPagination(currentProductList);
 }
+
 
 // Search products
 function searchProducts() {
     const query = document.getElementById('searchInput').value.toLowerCase();
+    currentPage = 1;
+
     if (!query) {
-        renderProducts(products);
-        return;
+        currentProductList = products;
+    } else {
+        currentProductList = products.filter(p =>
+            p.name.toLowerCase().includes(query) ||
+            p.category.toLowerCase().includes(query)
+        );
     }
 
-    const filtered = products.filter(p => 
-        p.name.toLowerCase().includes(query) ||
-        p.category.toLowerCase().includes(query) ||
-        p.description.toLowerCase().includes(query)
-    );
-    renderProducts(filtered);
+    renderProductsWithPagination(currentProductList);
 }
+
 
 // Close modal when clicking outside
 window.onclick = function(event) {
@@ -241,7 +421,62 @@ if (searchInput) {
         }
     });
 }
+let currentPage = 1;
+const itemsPerPage = 16; // mỗi trang 8 sản phẩm cho đẹp layout
+let currentProductList = products; // products = mảng sản phẩm của bạn
 
-// Initial render
-renderProducts();
-updateCartCount();
+function renderProductsWithPagination(list = products) {
+    const grid = document.getElementById('productsGrid');
+    const pagination = document.getElementById('pagination');
+    const emptyState = document.getElementById('emptyState');
+
+    if (!list.length) {
+        grid.innerHTML = '';
+        pagination.innerHTML = '';
+        emptyState.style.display = 'block';
+        return;
+    }
+
+    emptyState.style.display = 'none';
+
+    const totalPages = Math.ceil(list.length / itemsPerPage);
+    const start = (currentPage - 1) * itemsPerPage;
+    const end = start + itemsPerPage;
+    const pageItems = list.slice(start, end);
+
+    // Render sản phẩm
+    grid.innerHTML = pageItems.map(product => `
+        <div class="product-card" onclick="showDetail(${product.id})">
+            <img src="${product.image}" class="product-image">
+            <div class="product-info">
+                <span class="product-category">${product.category}</span>
+                <h3 class="product-name">${product.name}</h3>
+                <div class="product-price">${formatPrice(product.price)}</div>
+                <div class="product-stock ${product.stock === 'Hết hàng' ? 'out-of-stock' : ''}">
+                    ${product.stock === 'Hết hàng'
+                        ? '<i class="fa-solid fa-circle-xmark"></i> Hết hàng'
+                        : '<i class="fa-solid fa-circle-check"></i> Còn hàng'}
+                </div>
+            </div>
+        </div>
+    `).join('');
+
+    // Render pagination
+    pagination.innerHTML = Array.from({ length: totalPages }, (_, i) => `
+        <button 
+            class="${currentPage === i + 1 ? 'active' : ''}" 
+            onclick="goToPage(${i + 1})">
+            ${i + 1}
+        </button>
+    `).join('');
+}
+
+function goToPage(page) {
+    currentPage = page;
+    renderProductsWithPagination(currentProductList);
+    document.querySelector('.products-section').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+}
+renderProductsWithPagination(products);
