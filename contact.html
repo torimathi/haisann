@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Hệ - DanaLocal</title>
+    <meta name="description" content="Liên hệ với DanaLocal – chúng tôi luôn sẵn sàng lắng nghe và hỗ trợ bạn mọi lúc. Hotline, email, địa chỉ cửa hàng và bản đồ.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* ===== CONTACT PAGE STYLES ===== */
+        .contact-hero {
+            background: linear-gradient(135deg, #c7252e 0%, #8b0000 60%, #2c0a0a 100%);
+            padding: 60px 0 50px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .contact-hero .hero-icon {
+            font-size: 3rem;
+            margin-bottom: 16px;
+            display: block;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50%       { transform: translateY(-8px); }
+        }
+
+        .contact-hero h1 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: 2px;
+            position: relative;
+            margin-bottom: 12px;
+        }
+
+        .contact-hero p {
+            color: rgba(255,255,255,0.87);
+            font-size: 1.05rem;
+            position: relative;
+            max-width: 580px;
+            margin: 0 auto;
+            line-height: 1.75;
+        }
+
+        /* ===== LAYOUT ===== */
+        .contact-page {
+            padding: 50px 0 70px;
+            background: #fafafa;
+        }
+
+        .contact-container {
+            max-width: 920px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== CARD ===== */
+        .ct-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 38px 42px;
+            margin-bottom: 28px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+            border-left: 5px solid #c7252e;
+            transition: box-shadow 0.3s;
+        }
+
+        .ct-card:hover {
+            box-shadow: 0 8px 32px rgba(199,37,46,0.12);
+        }
+
+        .ct-card h2 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #c7252e;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 22px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid #f0e0e0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .ct-card h2 .s-num {
+            background: #c7252e;
+            color: #fff;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            flex-shrink: 0;
+        }
+
+        .ct-card p {
+            color: #555;
+            line-height: 1.8;
+            font-size: 0.97rem;
+            margin-bottom: 16px;
+        }
+
+        /* ===== INFO GRID ===== */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            background: #fff8f8;
+            border: 1px solid #f5d5d5;
+            border-radius: 12px;
+            padding: 16px 18px;
+            transition: transform 0.2s;
+        }
+
+        .info-item:hover {
+            transform: translateY(-2px);
+        }
+
+        .info-item.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .info-icon {
+            width: 42px;
+            height: 42px;
+            background: #c7252e;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .info-text small {
+            display: block;
+            color: #999;
+            font-size: 0.78rem;
+            margin-bottom: 2px;
+        }
+
+        .info-text strong {
+            color: #222;
+            font-size: 0.97rem;
+            display: block;
+        }
+
+        .info-text a {
+            color: #c7252e;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .info-text a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== MAP ===== */
+        .map-wrap {
+            margin-top: 10px;
+        }
+
+        .map-intro {
+            color: #555;
+            font-size: 0.96rem;
+            line-height: 1.75;
+            margin-bottom: 18px;
+        }
+
+        .map-embed {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            border: 2px solid #f0e0e0;
+        }
+
+        .map-embed iframe {
+            width: 100%;
+            height: 320px;
+            border: none;
+            display: block;
+        }
+
+        .map-note {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-top: 14px;
+            background: #fff8f8;
+            border: 1px dashed #f0c0c0;
+            border-radius: 8px;
+            padding: 12px 16px;
+            color: #8b0000;
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .map-note i {
+            color: #c7252e;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        /* ===== CHANNEL LIST ===== */
+        .channel-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .channel-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px dashed #f0e0e0;
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.65;
+        }
+
+        .channel-list li:last-child {
+            border-bottom: none;
+        }
+
+        .channel-list li .ch-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.95rem;
+            flex-shrink: 0;
+            color: #fff;
+        }
+
+        .ch-phone  { background: #c7252e; }
+        .ch-chat   { background: #2980b9; }
+        .ch-fb     { background: #1877f2; }
+        .ch-zalo   { background: #0068ff; }
+        .ch-email  { background: #27ae60; }
+
+        .channel-list li .ch-body strong {
+            display: block;
+            color: #222;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .badge-fast {
+            display: inline-block;
+            background: #e74c3c;
+            color: #fff;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 20px;
+            margin-left: 6px;
+            vertical-align: middle;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50%       { opacity: 0.7; }
+        }
+
+        /* ===== COMMITMENT BLOCK ===== */
+        .commit-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .commit-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 11px 0;
+            border-bottom: 1px dashed #f0e0e0;
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .commit-list li:last-child {
+            border-bottom: none;
+        }
+
+        .commit-list li .ci-check {
+            color: #27ae60;
+            font-size: 1.05rem;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .commit-banner {
+            margin-top: 22px;
+            background: linear-gradient(135deg, #c7252e, #8b0000);
+            border-radius: 12px;
+            padding: 22px 28px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .commit-banner p {
+            margin: 0;
+            font-size: 1.05rem;
+            line-height: 1.75;
+            color: rgba(255,255,255,0.93);
+        }
+
+        .commit-banner strong {
+            font-size: 1.15rem;
+            color: #fff;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 640px) {
+            .ct-card {
+                padding: 26px 20px;
+            }
+
+            .contact-hero h1 {
+                font-size: 1.7rem;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="vgift-header">
+        <div class="top-bar">
+            <div class="container top-content">
+                <div class="brand">
+                    <img src="images/logo.png" alt="Vgift" class="logo-img">
+                    <div class="brand-tagline">Tatste The Specialty</div>
+                </div>
+
+                <div class="header-actions">
+                    <div class="hotline">
+                        <span class="hotline-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M2.25 4.5l3.6-.9a1.5 1.5 0 0 1 1.7.9l1.6 3.8a1.5 1.5 0 0 1-.4 1.7l-1.8 1.5a12 12 0 0 0 5.4 5.4l1.5-1.8a1.5 1.5 0 0 1 1.7-.4l3.8 1.6a1.5 1.5 0 0 1 .9 1.7l-.9 3.6a1.5 1.5 0 0 1-1.5 1.1C9.3 23.1.9 14.7 1.1 5.9A1.5 1.5 0 0 1 2.25 4.5z" />
+                            </svg>
+                        </span>
+                        <div class="hotline-text">
+                            <small>Hotline</small>
+                            <strong>0865 914 715</strong>
+                        </div>
+                    </div>
+
+                    <a href="cart.html" class="cart-btn">
+                        <span class="cart-icon">🛒</span>
+                        <span class="cart-text">GIỎ HÀNG</span>
+                        <span class="cart-badge" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <div class="container nav-content">
+                <ul class="nav-left">
+                    <li class="dropdown category-trigger">
+                        <a href="#"><span class="menu-icon">☰</span> Danh mục sản phẩm <i class="fa-solid fa-angle-down" style="margin-left:5px"></i></a>
+                        <ul class="dropdown-menu">
+                            <li class="category-featured">
+                                <a href="danh-muc/set-qua-tet.html"><span class="cat-text">Set Quà Tết 2026 – Xuân Giao Sắc</span></a>
+                            </li>
+                            <li><a href="danh-muc/muc-kho.html"><span class="cat-text">Mực khô</span></a></li>
+                            <li><a href="danh-muc/hai-san-an-lien.html"><span class="cat-text">Hải sản ăn liền</span></a></li>
+                            <li><a href="danh-muc/bo-kho.html"><span class="cat-text">Bò khô</span></a></li>
+                            <li><a href="danh-muc/tra-ca-phe.html"><span class="cat-text">Trà &amp; Cà phê</span></a></li>
+                            <li><a href="danh-muc/banh-keo.html"><span class="cat-text">Bánh kẹo</span></a></li>
+                            <li><a href="danh-muc/qua-luu-niem.html"><span class="cat-text">Quà Lưu Niệm</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="nav-right">
+                    <li><a href="guide.html">Hướng Dẫn Mua</a></li>
+                    <li><a href="cart.html">Thanh Toán</a></li>
+                    <li><a href="shipping.html">Vận Chuyển</a></li>
+                    <li><a href="cam-nang.html">Cẩm Nang</a></li>
+                    <li class="active"><a href="contact.html">Liên Hệ</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="contact-hero">
+        <span class="hero-icon">📞</span>
+        <h1>LIÊN HỆ</h1>
+        <p><strong style="color:#fff;">DanaLocal</strong> luôn sẵn sàng lắng nghe và đồng hành cùng bạn! Dù là thắc mắc về sản phẩm, đơn hàng hay vận chuyển — đội ngũ của chúng tôi sẽ phản hồi nhanh nhất có thể.</p>
+    </section>
+
+    <!-- Main Content -->
+    <section class="contact-page">
+        <div class="contact-container">
+
+            <!-- PHẦN 1: Thông tin liên hệ -->
+            <div class="ct-card">
+                <h2>
+                    <span class="s-num">1</span>
+                    Thông tin liên hệ
+                </h2>
+                <p>Mọi thắc mắc, góp ý hay yêu cầu tư vấn sản phẩm, quý khách có thể liên hệ trực tiếp với <strong>DanaLocal</strong> qua các thông tin bên dưới. Chúng tôi cam kết phản hồi trong thời gian sớm nhất.</p>
+
+                <div class="info-grid">
+                    <div class="info-item full-width">
+                        <div class="info-icon"><i class="fa-solid fa-store"></i></div>
+                        <div class="info-text">
+                            <small>Tên thương hiệu</small>
+                            <strong>DanaLocal – Đặc Sản Đà Nẵng</strong>
+                        </div>
+                    </div>
+
+                    <div class="info-item full-width">
+                        <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="info-text">
+                            <small>Địa chỉ cửa hàng</small>
+                            <strong>72 Đường Lê Cơ, Phường An Khê, Quận Thanh Khê, Đà Nẵng</strong>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div class="info-text">
+                            <small>Hotline hỗ trợ</small>
+                            <strong><a href="tel:0865914715">0865 914 715</a></strong>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="info-text">
+                            <small>Email hỗ trợ</small>
+                            <strong><a href="mailto:danalocal.vn@gmail.com">danalocal.vn@gmail.com</a></strong>
+                        </div>
+                    </div>
+
+                    <div class="info-item full-width">
+                        <div class="info-icon"><i class="fa-regular fa-clock"></i></div>
+                        <div class="info-text">
+                            <small>Giờ làm việc</small>
+                            <strong>Thứ 2 – Chủ nhật: 8h00 – 21h00 (kể cả ngày lễ)</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PHẦN 2: Bản đồ -->
+            <div class="ct-card">
+                <h2>
+                    <span class="s-num">2</span>
+                    Bản đồ – Tìm đường đến cửa hàng
+                </h2>
+
+                <p class="map-intro">
+                    Showroom <strong>DanaLocal</strong> tọa lạc tại <strong>72 Đường Lê Cơ, Quận Thanh Khê, Đà Nẵng</strong> — khu vực trung tâm thành phố, thuận tiện di chuyển từ mọi hướng. Bạn có thể ghé trực tiếp để xem sản phẩm, đặt quà theo yêu cầu hoặc nhận hàng tận tay.
+                </p>
+
+                <div class="map-wrap">
+                    <div class="map-embed">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.200!2d108.1981!3d16.0544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDAzJzE2LjAiTiAxMDjCsDExJzUzLjIiRQ!5e0!3m2!1svi!2svn!4v1680500000000!5m2!1svi!2svn"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Bản đồ cửa hàng DanaLocal – 72 Lê Cơ, Đà Nẵng">
+                        </iframe>
+                    </div>
+
+                    <div class="map-note">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <span>Cửa hàng nằm trên trục đường Lê Cơ, ngay gần khu vực trung tâm Quận Thanh Khê. Có chỗ để xe thuận tiện. Có thể đến dễ dàng bằng xe máy, ô tô hoặc xe công nghệ (Grab, Xanh SM…).</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PHẦN 3: Kênh hỗ trợ nhanh -->
+            <div class="ct-card">
+                <h2>
+                    <span class="s-num">3</span>
+                    Kênh hỗ trợ nhanh
+                </h2>
+                <p>Ngoài việc ghé trực tiếp hoặc gọi điện, quý khách có thể liên hệ qua các kênh sau để được hỗ trợ nhanh nhất — thường phản hồi trong vòng <strong>15 – 30 phút</strong> trong giờ làm việc.</p>
+
+                <ul class="channel-list">
+                    <li>
+                        <div class="ch-icon ch-phone"><i class="fa-solid fa-phone"></i></div>
+                        <div class="ch-body">
+                            <strong>Hotline: 0865 914 715 <span class="badge-fast">NHANH NHẤT</span></strong>
+                            Gọi trực tiếp để được tư vấn ngay — đặc biệt hiệu quả cho đơn hàng gấp hoặc quà tặng theo yêu cầu.
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ch-icon ch-chat"><i class="fa-solid fa-comment-dots"></i></div>
+                        <div class="ch-body">
+                            <strong>Chat trực tiếp trên website</strong>
+                            Nhấn vào biểu tượng chat ở góc dưới màn hình để nhắn tin ngay với nhân viên tư vấn — không cần gọi điện, tiện lợi và nhanh chóng.
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ch-icon ch-fb"><i class="fa-brands fa-facebook-f"></i></div>
+                        <div class="ch-body">
+                            <strong>Facebook Fanpage</strong>
+                            Nhắn tin qua trang Facebook chính thức của chúng tôi. Chúng tôi thường phản hồi trong vòng 30 phút trong giờ làm việc.
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ch-icon ch-zalo"><i class="fa-solid fa-comment"></i></div>
+                        <div class="ch-body">
+                            <strong>Zalo OA</strong>
+                            Kết bạn và nhắn tin qua Zalo theo số <strong>0865 914 715</strong>. Thích hợp để trao đổi chi tiết về đơn hàng, ảnh sản phẩm, yêu cầu quà tặng cá nhân hóa.
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ch-icon ch-email"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="ch-body">
+                            <strong>Email: danalocal.vn@gmail.com</strong>
+                            Phù hợp cho các yêu cầu hợp tác, đặt hàng số lượng lớn hoặc cần xác nhận bằng văn bản. Phản hồi trong vòng 24 giờ làm việc.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- PHẦN 4: Lời cam kết -->
+            <div class="ct-card">
+                <h2>
+                    <span class="s-num">4</span>
+                    Cam kết của chúng tôi
+                </h2>
+                <p>Tại <strong>DanaLocal</strong>, mỗi khách hàng là một người bạn đồng hành. Chúng tôi không chỉ bán hàng — chúng tôi cam kết luôn ở bên bạn trong từng trải nghiệm mua sắm.</p>
+
+                <ul class="commit-list">
+                    <li>
+                        <i class="fa-solid fa-circle-check ci-check"></i>
+                        <span><strong>Hỗ trợ tận tình, không bỏ sót câu hỏi nào</strong> — mọi thắc mắc về sản phẩm, thành phần, xuất xứ đều được giải đáp rõ ràng và trung thực.</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-circle-check ci-check"></i>
+                        <span><strong>Xử lý vấn đề đơn hàng trong 24 giờ</strong> — từ sai địa chỉ, đổi sản phẩm, đến khiếu nại về chất lượng, chúng tôi luôn giải quyết nhanh và công bằng.</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-circle-check ci-check"></i>
+                        <span><strong>Hỗ trợ toàn bộ quá trình vận chuyển</strong> — nếu hàng chậm, thất lạc hoặc gặp sự cố khi giao nhận, chúng tôi chủ động theo dõi và cập nhật cho bạn.</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-circle-check ci-check"></i>
+                        <span><strong>Tư vấn quà tặng miễn phí</strong> — không biết chọn gì? Cứ liên hệ, chúng tôi sẽ gợi ý phù hợp với ngân sách và đối tượng tặng của bạn.</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-circle-check ci-check"></i>
+                        <span><strong>Bảo mật thông tin tuyệt đối</strong> — dữ liệu cá nhân và thông tin đơn hàng của bạn được bảo vệ và không chia sẻ cho bên thứ ba.</span>
+                    </li>
+                </ul>
+
+                <div class="commit-banner">
+                    <p><strong>💬 "Mỗi đặc sản là một lời hứa từ DanaLocal."</strong><br>
+                    Chúng tôi luôn nỗ lực để bạn hài lòng — từ lúc đặt hàng đến khi nhận hàng. Hãy liên hệ bất cứ lúc nào, chúng tôi luôn sẵn sàng!</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Floating Contact Icons -->
+    <div class="floating-contact">
+        <a href="https://m.me/yourpage" target="_blank" class="contact-icon messenger-icon" title="Chat với chúng tôi">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 3 .97 4.29L2 22l6.29-.97C9.95 21.61 10.97 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.41 0-2.73-.36-3.88-.99l-.28-.15-2.89.44.44-2.89-.15-.27C4.46 14.73 4 13.38 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8z" />
+                <circle cx="12" cy="12" r="1" />
+                <circle cx="7" cy="12" r="1" />
+                <circle cx="17" cy="12" r="1" />
+            </svg>
+        </a>
+        <a href="mailto:danalocal.vn@gmail.com" class="contact-icon email-icon" title="Gửi email">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+            </svg>
+        </a>
+        <a href="tel:0865914715" class="contact-icon phone-icon" title="Gọi cho chúng tôi">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+            </svg>
+        </a>
+    </div>
+
+    <!-- Toast -->
+    <div id="toast" class="toast"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content container">
+                <div class="footer-column">
+                    <h3>DanaLocal</h3>
+                    <p>Chuyên cung cấp các sản phẩm đặc sản Đà Nẵng chất lượng cao, được chọn lọc kỹ càng từ những người làm nghề uy tín.</p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" title="Zalo"><i class="fa-solid fa-comment-dots"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column container">
+                    <h4>Về chúng tôi</h4>
+                    <ul>
+                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="#">Tin tức</a></li>
+                        <li><a href="#">Tuyển dụng</a></li>
+                        <li><a href="contact.html">Liên hệ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column container">
+                    <h4>Hỗ trợ khách hàng</h4>
+                    <ul>
+                        <li><a href="#">Hướng dẫn đặt hàng</a></li>
+                        <li><a href="#">Chính sách đổi trả</a></li>
+                        <li><a href="shipping.html">Chính sách vận chuyển</a></li>
+                        <li><a href="#">Câu hỏi thường gặp</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Thông tin liên hệ</h4>
+                    <ul class="contact-info">
+                        <li><i class="fa-solid fa-location-dot"></i> 72 Đường Lê Cơ, Đà Nẵng</li>
+                        <li><i class="fa-solid fa-phone"></i> Hotline: <strong>0865 914 715</strong></li>
+                        <li><i class="fa-solid fa-envelope"></i> Email: danalocal.vn@gmail.com</li>
+                        <li><i class="fa-regular fa-clock"></i> Giờ làm việc: 8:00 - 21:00</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 DanaLocal. Bảo lưu mọi quyền.</p>
+                <div class="footer-links">
+                    <a href="#">Chính sách bảo mật</a>
+                    <a href="#">Điều khoản sử dụng</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="cursor-effects.js"></script>
+</body>
+
+</html>

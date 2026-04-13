@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hướng Dẫn Mua Hàng - Đặc Sản Đà Nẵng</title>
+    <meta name="description" content="Hướng dẫn mua hàng tại VGift – 6 bước đơn giản để đặt đặc sản Đà Nẵng chất lượng, giao tận nơi toàn quốc.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* ===== GUIDE HERO ===== */
+        .guide-hero {
+            background: linear-gradient(135deg, #c7252e 0%, #8b0000 60%, #2c0a0a 100%);
+            padding: 60px 0 50px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .guide-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .guide-hero .hero-icon {
+            font-size: 3rem;
+            margin-bottom: 16px;
+            display: block;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50%       { transform: translateY(-8px); }
+        }
+
+        .guide-hero h1 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: 2px;
+            position: relative;
+            margin-bottom: 12px;
+        }
+
+        .guide-hero p {
+            color: rgba(255,255,255,0.87);
+            font-size: 1.05rem;
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.75;
+        }
+
+        /* ===== LAYOUT ===== */
+        .guide-page {
+            padding: 50px 0 70px;
+            background: #fafafa;
+        }
+
+        .guide-container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== INTRO CARD ===== */
+        .intro-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 30px 42px;
+            margin-bottom: 28px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+            border-left: 5px solid #c7252e;
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+        }
+
+        .intro-card .intro-icon {
+            font-size: 2.2rem;
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+
+        .intro-card p {
+            color: #555;
+            line-height: 1.85;
+            font-size: 0.98rem;
+            margin: 0;
+        }
+
+        /* ===== STEP TIMELINE ===== */
+        .steps-wrap {
+            position: relative;
+        }
+
+        .steps-wrap::before {
+            content: '';
+            position: absolute;
+            left: 28px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #c7252e, #f5a0a4);
+            border-radius: 2px;
+        }
+
+        .step-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 36px 28px 80px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+            position: relative;
+            transition: box-shadow 0.3s, transform 0.2s;
+        }
+
+        .step-card:hover {
+            box-shadow: 0 8px 30px rgba(199,37,46,0.12);
+            transform: translateX(4px);
+        }
+
+        .step-number {
+            position: absolute;
+            left: -14px;
+            top: 28px;
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, #c7252e, #8b0000);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            font-weight: 900;
+            box-shadow: 0 4px 12px rgba(199,37,46,0.4);
+            border: 3px solid #fff;
+        }
+
+        .step-card h3 {
+            font-size: 1.08rem;
+            font-weight: 800;
+            color: #c7252e;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .step-card h3 .step-emoji {
+            font-size: 1.1rem;
+        }
+
+        .step-card p {
+            color: #555;
+            line-height: 1.8;
+            font-size: 0.96rem;
+            margin-bottom: 10px;
+        }
+
+        .step-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ===== BULLET LIST INSIDE STEP ===== */
+        .step-list {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0;
+        }
+
+        .step-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            padding: 7px 0;
+            border-bottom: 1px dashed #f0e0e0;
+            color: #555;
+            font-size: 0.94rem;
+            line-height: 1.65;
+        }
+
+        .step-list li:last-child {
+            border-bottom: none;
+        }
+
+        .step-list li::before {
+            content: '✦';
+            color: #c7252e;
+            font-size: 0.6rem;
+            margin-top: 5px;
+            flex-shrink: 0;
+        }
+
+        .step-list li strong {
+            color: #333;
+        }
+
+        /* ===== ACTION HIGHLIGHT ===== */
+        .action-btn-label {
+            display: inline-block;
+            background: #c7252e;
+            color: #fff;
+            font-size: 0.82rem;
+            font-weight: 700;
+            padding: 3px 12px;
+            border-radius: 6px;
+            margin: 0 2px;
+        }
+
+        /* ===== TIP BOX ===== */
+        .tip-box {
+            background: linear-gradient(135deg, #fff8f8, #fff0e0);
+            border: 1px solid #f5c2a0;
+            border-radius: 10px;
+            padding: 14px 18px;
+            margin-top: 14px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .tip-box i {
+            color: #e67e22;
+            font-size: 1.1rem;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .tip-box p {
+            margin: 0;
+            color: #7a4a1a;
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        /* ===== CLOSING CARD ===== */
+        .closing-card {
+            background: linear-gradient(135deg, #c7252e, #8b0000);
+            border-radius: 16px;
+            padding: 36px 42px;
+            text-align: center;
+            color: #fff;
+            margin-top: 10px;
+        }
+
+        .closing-card .closing-icon {
+            font-size: 2.8rem;
+            margin-bottom: 14px;
+            display: block;
+        }
+
+        .closing-card h3 {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .closing-card p {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.97rem;
+            line-height: 1.8;
+            max-width: 560px;
+            margin: 0 auto 20px;
+        }
+
+        .closing-card a.cta-btn {
+            display: inline-block;
+            background: #fff;
+            color: #c7252e;
+            font-weight: 800;
+            font-size: 0.97rem;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .closing-card a.cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 640px) {
+            .step-card {
+                padding: 24px 20px 24px 72px;
+            }
+
+            .guide-hero h1 {
+                font-size: 1.7rem;
+            }
+
+            .intro-card {
+                padding: 22px 20px;
+            }
+
+            .closing-card {
+                padding: 28px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="vgift-header">
+        <div class="top-bar">
+            <div class="container top-content">
+                <div class="brand">
+                    <img src="images/logo.png" alt="Vgift" class="logo-img">
+                    <div class="brand-tagline">Tatste The Specialty</div>
+                </div>
+
+                <div class="header-actions">
+                    <div class="hotline">
+                        <span class="hotline-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M2.25 4.5l3.6-.9a1.5 1.5 0 0 1 1.7.9l1.6 3.8a1.5 1.5 0 0 1-.4 1.7l-1.8 1.5a12 12 0 0 0 5.4 5.4l1.5-1.8a1.5 1.5 0 0 1 1.7-.4l3.8 1.6a1.5 1.5 0 0 1 .9 1.7l-.9 3.6a1.5 1.5 0 0 1-1.5 1.1C9.3 23.1.9 14.7 1.1 5.9A1.5 1.5 0 0 1 2.25 4.5z" />
+                            </svg>
+                        </span>
+                        <div class="hotline-text">
+                            <small>Hotline</small>
+                            <strong>0865 914 715</strong>
+                        </div>
+                    </div>
+
+                    <a href="cart.html" class="cart-btn">
+                        <span class="cart-icon">🛒</span>
+                        <span class="cart-text">GIỎ HÀNG</span>
+                        <span class="cart-badge" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <div class="container nav-content">
+                <ul class="nav-left">
+                    <li class="dropdown category-trigger">
+                        <a href="#"><span class="menu-icon">☰</span> Danh mục sản phẩm <i class="fa-solid fa-angle-down" style="margin-left:5px"></i></a>
+                        <ul class="dropdown-menu">
+                            <li class="category-featured">
+                                <a href="danh-muc/set-qua-tet.html"><span class="cat-text">Set Quà Tết 2026 – Xuân Giao Sắc</span></a>
+                            </li>
+                            <li><a href="danh-muc/muc-kho.html"><span class="cat-text">Mực khô</span></a></li>
+                            <li><a href="danh-muc/hai-san-an-lien.html"><span class="cat-text">Hải sản ăn liền</span></a></li>
+                            <li><a href="danh-muc/bo-kho.html"><span class="cat-text">Bò khô</span></a></li>
+                            <li><a href="danh-muc/tra-ca-phe.html"><span class="cat-text">Trà &amp; Cà phê</span></a></li>
+                            <li><a href="danh-muc/banh-keo.html"><span class="cat-text">Bánh kẹo</span></a></li>
+                            <li><a href="danh-muc/qua-luu-niem.html"><span class="cat-text">Quà Lưu Niệm</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="nav-right">
+                    <li class="active"><a href="guide.html">Hướng Dẫn Mua</a></li>
+                    <li><a href="cart.html">Thanh Toán</a></li>
+                    <li><a href="shipping.html">Vận Chuyển</a></li>
+                    <li><a href="cam-nang.html">Cẩm Nang</a></li>
+                    <li><a href="contact.html">Liên Hệ</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="guide-hero">
+        <span class="hero-icon">🛍️</span>
+        <h1>HƯỚNG DẪN MUA HÀNG</h1>
+        <p>Chúng tôi muốn mang đến cho bạn trải nghiệm mua sắm thật dễ dàng và tiện lợi. Dưới đây là 6 bước đơn giản để đặt hàng trực tuyến trên website <strong style="color:#fff;">Vigift.vn</strong> — chỉ mất vài phút!</p>
+    </section>
+
+    <!-- Main Content -->
+    <section class="guide-page">
+        <div class="guide-container">
+
+            <!-- Intro -->
+            <div class="intro-card">
+                <span class="intro-icon">💡</span>
+                <p>Dù bạn là người mua hàng online lần đầu hay đã quen với mua sắm trực tuyến, hướng dẫn này sẽ giúp bạn đặt hàng dễ dàng và nhanh chóng. Nếu cần hỗ trợ thêm, đừng ngần ngại gọi hotline <strong>0865 914 715</strong> — chúng tôi luôn sẵn sàng!</p>
+            </div>
+
+            <!-- Steps -->
+            <div class="steps-wrap">
+
+                <!-- Bước 1 -->
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3><span class="step-emoji">🔍</span> Bước 1 – Tìm hiểu sản phẩm</h3>
+                    <p>Truy cập website <strong>Vigift.vn</strong>, duyệt qua các danh mục sản phẩm hoặc dùng thanh tìm kiếm để tìm món bạn muốn.</p>
+                    <ul class="step-list">
+                        <li>Nhấn vào <strong>hình ảnh</strong> hoặc <strong>tên sản phẩm</strong> để xem chi tiết.</li>
+                        <li>Bạn có thể lọc sản phẩm theo danh mục: Mực khô, Bò khô, Hải sản ăn liền, Set quà tặng…</li>
+                        <li>Dùng thanh tìm kiếm ở đầu trang để tìm nhanh theo tên sản phẩm.</li>
+                    </ul>
+                </div>
+
+                <!-- Bước 2 -->
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3><span class="step-emoji">📋</span> Bước 2 – Xem chi tiết sản phẩm</h3>
+                    <p>Trang chi tiết sản phẩm cung cấp đầy đủ thông tin để bạn đưa ra quyết định tốt nhất:</p>
+                    <ul class="step-list">
+                        <li><strong>Hình ảnh sản phẩm</strong> rõ nét, thực tế từ nhiều góc độ.</li>
+                        <li><strong>Mô tả sản phẩm</strong> chi tiết: xuất xứ, thành phần, cách bảo quản, trọng lượng.</li>
+                        <li><strong>Giá bán</strong> niêm yết rõ ràng, không phát sinh thêm chi phí ẩn.</li>
+                        <li><strong>Đánh giá từ khách hàng</strong> đã mua để tham khảo thêm.</li>
+                    </ul>
+                </div>
+
+                <!-- Bước 3 -->
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3><span class="step-emoji">🛒</span> Bước 3 – Thêm vào giỏ hàng</h3>
+                    <p>Khi đã ưng sản phẩm, hãy chọn số lượng phù hợp rồi nhấn nút:</p>
+                    <ul class="step-list">
+                        <li>Nhấn <span class="action-btn-label">+ Thêm vào giỏ hàng</span> để lưu sản phẩm vào giỏ.</li>
+                        <li>Sau đó bạn có thể <strong>tiếp tục mua sắm</strong> — quay lại danh mục Đặc Sản Đà Nẵng để chọn thêm sản phẩm khác.</li>
+                        <li>Số lượng sản phẩm trong giỏ sẽ được hiển thị ngay trên <strong>biểu tượng giỏ hàng</strong> ở góc trên bên phải.</li>
+                    </ul>
+                    <div class="tip-box">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <p>💡 Mẹo nhỏ: Bạn có thể thêm nhiều loại sản phẩm vào giỏ trước khi thanh toán — không cần đặt từng đơn riêng lẻ!</p>
+                    </div>
+                </div>
+
+                <!-- Bước 4 -->
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3><span class="step-emoji">👀</span> Bước 4 – Kiểm tra giỏ hàng</h3>
+                    <p>Sau khi đã chọn đủ sản phẩm, nhấn vào biểu tượng <strong>🛒 GIỎ HÀNG</strong> ở góc trên bên phải màn hình để xem lại toàn bộ đơn hàng.</p>
+                    <ul class="step-list">
+                        <li>Kiểm tra lại <strong>tên sản phẩm</strong>, <strong>số lượng</strong> và <strong>đơn giá</strong>.</li>
+                        <li>Bạn có thể tăng/giảm số lượng hoặc xóa sản phẩm không muốn mua trực tiếp tại đây.</li>
+                    </ul>
+                </div>
+
+                <!-- Bước 5 -->
+                <div class="step-card">
+                    <div class="step-number">5</div>
+                    <h3><span class="step-emoji">🧾</span> Bước 5 – Xác nhận đơn và tiến hành thanh toán</h3>
+                    <p>Tại trang giỏ hàng, bạn sẽ thấy:</p>
+                    <ul class="step-list">
+                        <li><strong>Danh sách toàn bộ sản phẩm</strong> đã chọn với hình ảnh và thông tin cụ thể.</li>
+                        <li><strong>Tổng giá trị đơn hàng</strong> được tính tự động, rõ ràng và minh bạch.</li>
+                        <li>Xem lại một lần nữa để chắc chắn mọi thứ đã đúng.</li>
+                        <li>Nhấn nút <span class="action-btn-label">Tiến hành thanh toán</span> để chuyển sang bước cuối.</li>
+                    </ul>
+                </div>
+
+                <!-- Bước 6 -->
+                <div class="step-card">
+                    <div class="step-number">6</div>
+                    <h3><span class="step-emoji">✅</span> Bước 6 – Hoàn tất đơn hàng</h3>
+                    <p>Đây là bước cuối cùng! Điền đầy đủ thông tin để chúng tôi giao hàng đúng địa chỉ:</p>
+                    <ul class="step-list">
+                        <li>Nhập <strong>họ tên</strong>, <strong>số điện thoại</strong> và <strong>địa chỉ nhận hàng</strong> đầy đủ và chính xác.</li>
+                        <li>Chọn <strong>phương thức thanh toán</strong> phù hợp: chuyển khoản ngân hàng hoặc thanh toán khi nhận hàng (COD).</li>
+                        <li>Kiểm tra lại toàn bộ thông tin một lần nữa, rồi nhấn <span class="action-btn-label">Đặt hàng</span>.</li>
+                    </ul>
+                    <div class="tip-box">
+                        <i class="fa-solid fa-circle-check" style="color: #27ae60;"></i>
+                        <p>Sau khi đặt hàng thành công, nhân viên <strong>Vigift</strong> sẽ chủ động liên hệ xác nhận đơn hàng với bạn trong thời gian sớm nhất — thường trong vòng <strong>30 phút đến 2 tiếng</strong> (trong giờ làm việc 8:00 – 21:00).</p>
+                    </div>
+                </div>
+
+            </div><!-- .steps-wrap -->
+
+            <!-- Closing CTA -->
+            <div class="closing-card">
+                <span class="closing-icon">🎉</span>
+                <h3>Chúc bạn mua sắm vui vẻ!</h3>
+                <p>Chỉ với vài thao tác đơn giản, những đặc sản Đà Nẵng thơm ngon sẽ được giao tận tay bạn — nhanh chóng, tiện lợi và an toàn. Nếu gặp bất kỳ khó khăn nào trong quá trình đặt hàng, đừng ngần ngại liên hệ với chúng tôi!</p>
+                <a href="index.html" class="cta-btn">🛍️ Mua sắm ngay</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Floating Contact Icons -->
+    <div class="floating-contact">
+        <a href="https://m.me/yourpage" target="_blank" class="contact-icon messenger-icon" title="Chat với chúng tôi">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 3 .97 4.29L2 22l6.29-.97C9.95 21.61 10.97 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.41 0-2.73-.36-3.88-.99l-.28-.15-2.89.44.44-2.89-.15-.27C4.46 14.73 4 13.38 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8z"/>
+                <circle cx="12" cy="12" r="1"/>
+                <circle cx="7" cy="12" r="1"/>
+                <circle cx="17" cy="12" r="1"/>
+            </svg>
+        </a>
+        <a href="mailto:danalocal.vn@gmail.com" class="contact-icon email-icon" title="Gửi email">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+        </a>
+        <a href="tel:0865914715" class="contact-icon phone-icon" title="Gọi cho chúng tôi">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+            </svg>
+        </a>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content container">
+                <div class="footer-column">
+                    <h3>Đặc Sản Đà Nẵng</h3>
+                    <p>Chuyên cung cấp các sản phẩm đặc sản Đà Nẵng chất lượng cao, được chọn lọc kỹ càng từ những người làm nghề uy tín.</p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" title="Zalo"><i class="fa-solid fa-comment-dots"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column container">
+                    <h4>Về chúng tôi</h4>
+                    <ul>
+                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="#">Tin tức</a></li>
+                        <li><a href="#">Tuyển dụng</a></li>
+                        <li><a href="contact.html">Liên hệ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column container">
+                    <h4>Hỗ trợ khách hàng</h4>
+                    <ul>
+                        <li><a href="guide.html">Hướng dẫn đặt hàng</a></li>
+                        <li><a href="#">Chính sách đổi trả</a></li>
+                        <li><a href="shipping.html">Chính sách vận chuyển</a></li>
+                        <li><a href="#">Câu hỏi thường gặp</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Thông tin liên hệ</h4>
+                    <ul class="contact-info">
+                        <li><i class="fa-solid fa-location-dot"></i> 72 Đường Lê Cơ, Đà Nẵng</li>
+                        <li><i class="fa-solid fa-phone"></i> Hotline: <strong>0865 914 715</strong></li>
+                        <li><i class="fa-solid fa-envelope"></i> Email: danalocal.vn@gmail.com</li>
+                        <li><i class="fa-regular fa-clock"></i> Giờ làm việc: 8:00 - 21:00</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Đặc Sản Đà Nẵng. Bảo lưu mọi quyền.</p>
+                <div class="footer-links">
+                    <a href="#">Chính sách bảo mật</a>
+                    <a href="#">Điều khoản sử dụng</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="cursor-effects.js"></script>
+</body>
+
+</html>

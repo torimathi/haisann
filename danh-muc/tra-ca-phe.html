@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trà & Cà Phê Đặc Sản – Trà Sen, Trà Gừng, Cà Phê Rang Xay | Đặc Sản Đà Nẵng</title>
+    <meta name="description" content="Trà và cà phê đặc sản Việt Nam: trà sen Tây Hồ, trà gừng mật ong, trà sâm dứa, cà phê rang xay Đà Lạt. Hương vị đậm đà, quà tặng ý nghĩa giao toàn quốc.">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header class="vgift-header">
+        <div class="top-bar">
+            <div class="container top-content">
+                <div class="brand">
+                    <a href="../index.html"><img src="../images/logo.png" alt="Đặc Sản Đà Nẵng" class="logo-img"></a>
+                    <div class="brand-tagline">Taste The Specialty</div>
+                </div>
+                <div class="header-actions">
+                    <div class="hotline">
+                        <span class="hotline-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.25 4.5l3.6-.9a1.5 1.5 0 0 1 1.7.9l1.6 3.8a1.5 1.5 0 0 1-.4 1.7l-1.8 1.5a12 12 0 0 0 5.4 5.4l1.5-1.8a1.5 1.5 0 0 1 1.7-.4l3.8 1.6a1.5 1.5 0 0 1 .9 1.7l-.9 3.6a1.5 1.5 0 0 1-1.5 1.1C9.3 23.1.9 14.7 1.1 5.9A1.5 1.5 0 0 1 2.25 4.5z" /></svg></span>
+                        <div class="hotline-text"><small>Hotline</small><strong>0865914715</strong></div>
+                    </div>
+                    <a href="../cart.html" class="cart-btn"><span class="cart-icon">🛒</span><span class="cart-text">GIỎ HÀNG</span><span class="cart-badge" id="cartCount">0</span></a>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container nav-content">
+                <ul class="nav-left">
+                    <li class="dropdown category-trigger">
+                        <a href="#"><span class="menu-icon">☰</span> Danh mục sản phẩm <i class="fa-solid fa-angle-down" style="margin-left:5px"></i></a>
+                        <ul class="dropdown-menu">
+                            <li class="category-featured"><a href="set-qua-tet.html"><span class="cat-text">Set Quà Tết 2026 – Xuân Giao Sắc</span></a></li>
+                            <li><a href="muc-kho.html"><span class="cat-text">Mực khô</span></a></li>
+                            <li><a href="hai-san-an-lien.html"><span class="cat-text">Hải sản ăn liền</span></a></li>
+                            <li><a href="bo-kho.html"><span class="cat-text">Bò khô</span></a></li>
+                            <li><a href="tra-ca-phe.html"><span class="cat-text">Trà &amp; Cà phê</span></a></li>
+                            <li><a href="banh-keo.html"><span class="cat-text">Bánh kẹo</span></a></li>
+                            <li><a href="qua-luu-niem.html"><span class="cat-text">Quà Lưu Niệm</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav-right">
+                    <li><a href="../guide.html">Hướng Dẫn Mua</a></li>
+                    <li><a href="../cart.html">Thanh Toán</a></li>
+                    <li><a href="../shipping.html">Vận Chuyển</a></li>
+                    <li><a href="../cam-nang.html">Cẩm Nang</a></li>
+                    <li><a href="../contact.html">Liên Hệ</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="breadcrumb-bar">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="breadcrumb">
+                <a href="../index.html"><i class="fa-solid fa-house"></i> Trang chủ</a>
+                <span class="bc-sep"><i class="fa-solid fa-chevron-right"></i></span>
+                <span class="bc-current">Trà &amp; Cà phê</span>
+            </nav>
+        </div>
+    </div>
+
+    <section class="cat-page-hero">
+        <div class="container">
+            <h1 class="cat-page-title">☕ Trà &amp; Cà Phê Đặc Sản</h1>
+            <p class="cat-page-desc">Từ trà sen thanh tao, trà gừng mật ong ấm lòng đến cà phê rang xay đậm đà – bộ sưu tập đồ uống đặc sản Việt Nam, quà tặng tinh tế cho mọi dịp lễ hay làm nên buổi sáng hoàn hảo.</p>
+        </div>
+    </section>
+
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">Sản phẩm Trà &amp; Cà phê</h2>
+            <div id="productsGrid" class="products-grid"></div>
+            <div id="pagination" class="pagination"></div>
+            <div id="emptyState" class="empty-state" style="display:none;"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"></path></svg><h3>Không tìm thấy sản phẩm</h3></div>
+        </div>
+    </section>
+
+    <div id="detailModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h2 id="detailTitle">Chi tiết sản phẩm</h2><button class="close-btn" onclick="closeModal('detailModal')"><i class="fa-solid fa-xmark"></i></button></div>
+            <div class="modal-body">
+                <img id="detailImage" class="modal-image" src="" alt="">
+                <div class="detail-info">
+                    <h3 id="detailName" style="margin-bottom:15px"></h3>
+                    <p><strong>Giá:</strong> <span id="detailPrice" style="color:#c7252e;font-size:24px;font-weight:bold"></span></p>
+                    <p><strong>Danh mục:</strong> <span id="detailCategory"></span></p>
+                    <p><strong>Trạng thái:</strong> <span id="detailStock"></span></p>
+                    <p><strong>Mô tả:</strong> <span id="detailDescription"></span></p>
+                    <div style="margin-top:30px;display:flex;gap:15px;align-items:center">
+                        <div style="display:flex;align-items:center;gap:10px"><button class="qty-btn" onclick="changeQuantity(-1)">−</button><input type="number" id="modalQuantity" value="1" min="1" readonly style="width:60px;text-align:center;border:2px solid #ddd;border-radius:5px;padding:8px"><button class="qty-btn" onclick="changeQuantity(1)">+</button></div>
+                        <button class="btn btn-add-cart" onclick="addToCartFromModal()" style="flex:1"><i class="bi bi-cart-plus"></i> Thêm vào giỏ hàng</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="floating-contact">
+        <a href="https://m.me/yourpage" target="_blank" class="contact-icon messenger-icon" title="Chat"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 3 .97 4.29L2 22l6.29-.97C9.95 21.61 10.97 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.41 0-2.73-.36-3.88-.99l-.28-.15-2.89.44.44-2.89-.15-.27C4.46 14.73 4 13.38 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8z"/><circle cx="12" cy="12" r="1"/><circle cx="7" cy="12" r="1"/><circle cx="17" cy="12" r="1"/></svg></a>
+        <a href="mailto:danalocal.vn@gmail.com" class="contact-icon email-icon" title="Email"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
+        <a href="tel:0865914715" class="contact-icon phone-icon" title="Gọi"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></a>
+    </div>
+    <div id="toast" class="toast"></div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content container">
+                <div class="footer-column"><h3>Đặc Sản Đà Nẵng</h3><p>Chuyên cung cấp đặc sản Đà Nẵng chất lượng cao, giao hàng toàn quốc.</p><div class="social-links"><a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" title="Zalo"><i class="fa-solid fa-comment-dots"></i></a></div></div>
+                <div class="footer-column container"><h4>Danh mục sản phẩm</h4><ul><li><a href="muc-kho.html">Mực khô</a></li><li><a href="hai-san-an-lien.html">Hải sản ăn liền</a></li><li><a href="bo-kho.html">Bò khô</a></li><li><a href="tra-ca-phe.html">Trà &amp; Cà phê</a></li><li><a href="banh-keo.html">Bánh kẹo</a></li></ul></div>
+                <div class="footer-column container"><h4>Hỗ trợ</h4><ul><li><a href="../guide.html">Hướng dẫn đặt hàng</a></li><li><a href="../shipping.html">Vận chuyển</a></li><li><a href="../cam-nang.html">Cẩm nang</a></li><li><a href="../contact.html">Liên hệ</a></li></ul></div>
+                <div class="footer-column"><h4>Liên hệ</h4><ul class="contact-info"><li><i class="fa-solid fa-location-dot"></i> 72 Đường Lê Cơ, Đà Nẵng</li><li><i class="fa-solid fa-phone"></i> <strong>0865914715</strong></li><li><i class="fa-solid fa-envelope"></i> danalocal.vn@gmail.com</li><li><i class="fa-regular fa-clock"></i> 8:00 - 22:00</li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2024 Đặc Sản Đà Nẵng. Bảo lưu mọi quyền.</p><div class="footer-links"><a href="#">Chính sách bảo mật</a><a href="#">Điều khoản sử dụng</a></div></div>
+        </div>
+    </footer>
+
+    <script>window._imgRoot = '../'; var pageCategoryFilter = 'Trà & Cà phê';</script>
+    <script src="../products-data.js"></script>
+    <script src="../script.js"></script>
+    <script src="../cursor-effects.js"></script>
+</body>
+</html>

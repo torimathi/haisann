@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chính Sách Vận Chuyển - Đặc Sản Đà Nẵng</title>
+    <meta name="description" content="Chính sách vận chuyển của Đặc Sản Đà Nẵng – giao hàng toàn quốc, nhanh chóng, tiện lợi với nhiều đơn vị vận chuyển uy tín.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* ===== SHIPPING PAGE STYLES ===== */
+        .shipping-hero {
+            background: linear-gradient(135deg, #c7252e 0%, #8b0000 60%, #2c0a0a 100%);
+            padding: 60px 0 50px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .shipping-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .shipping-hero h1 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: 2px;
+            position: relative;
+            margin-bottom: 12px;
+        }
+
+        .shipping-hero p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1.05rem;
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .shipping-hero .hero-icon {
+            font-size: 3rem;
+            margin-bottom: 16px;
+            display: block;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        .shipping-page {
+            padding: 50px 0 70px;
+            background: #fafafa;
+        }
+
+        .shipping-container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== SECTION CARD ===== */
+        .policy-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 38px 42px;
+            margin-bottom: 28px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+            border-left: 5px solid #c7252e;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .policy-card:hover {
+            box-shadow: 0 8px 32px rgba(199,37,46,0.12);
+        }
+
+        .policy-card h2 {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #c7252e;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid #f0e0e0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .policy-card h2 .section-num {
+            background: #c7252e;
+            color: #fff;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            flex-shrink: 0;
+        }
+
+        .policy-card p {
+            color: #555;
+            line-height: 1.8;
+            font-size: 0.97rem;
+            margin-bottom: 14px;
+        }
+
+        /* ===== ZONE BLOCK ===== */
+        .zone-block {
+            margin-bottom: 24px;
+        }
+
+        .zone-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(90deg, #fff5f5, #fff);
+            border-left: 4px solid #e06b3a;
+            padding: 10px 16px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 14px;
+        }
+
+        .zone-title i {
+            color: #c7252e;
+            font-size: 1.1rem;
+        }
+
+        .zone-title strong {
+            font-size: 1.02rem;
+            color: #b01e24;
+            font-weight: 700;
+        }
+
+        /* ===== BULLET LIST ===== */
+        .policy-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .policy-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 9px 0;
+            border-bottom: 1px dashed #f0e0e0;
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.65;
+        }
+
+        .policy-list li:last-child {
+            border-bottom: none;
+        }
+
+        .policy-list li::before {
+            content: '✦';
+            color: #c7252e;
+            font-size: 0.65rem;
+            margin-top: 5px;
+            flex-shrink: 0;
+        }
+
+        .policy-list li .badge-free {
+            display: inline-block;
+            background: #27ae60;
+            color: #fff;
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 20px;
+            margin-left: 6px;
+            vertical-align: middle;
+        }
+
+        .policy-list li .badge-support {
+            display: inline-block;
+            background: #e67e22;
+            color: #fff;
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 20px;
+            margin-left: 6px;
+            vertical-align: middle;
+        }
+
+        .policy-list li strong {
+            color: #333;
+            font-weight: 600;
+        }
+
+        /* ===== HIGHLIGHT BOX ===== */
+        .highlight-box {
+            background: linear-gradient(135deg, #fff8f8, #fff0e0);
+            border: 1px solid #f5c2a0;
+            border-radius: 10px;
+            padding: 16px 20px;
+            margin-top: 18px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .highlight-box i {
+            color: #e67e22;
+            font-size: 1.3rem;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            color: #7a4a1a;
+            font-size: 0.93rem;
+            line-height: 1.7;
+        }
+
+        /* ===== CONTACT SECTION ===== */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 10px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 16px 20px;
+            background: #fff8f8;
+            border-radius: 10px;
+            border: 1px solid #f5d5d5;
+            transition: transform 0.2s;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-2px);
+        }
+
+        .contact-item .ci-icon {
+            width: 44px;
+            height: 44px;
+            background: #c7252e;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .contact-item .ci-info small {
+            display: block;
+            color: #999;
+            font-size: 0.8rem;
+        }
+
+        .contact-item .ci-info strong {
+            color: #333;
+            font-size: 0.97rem;
+        }
+
+        .contact-item .ci-info a {
+            color: #c7252e;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .note-support {
+            background: #f0faf5;
+            border-left: 4px solid #27ae60;
+            padding: 14px 18px;
+            border-radius: 0 8px 8px 0;
+            margin-top: 18px;
+            color: #1a6b3e;
+            font-size: 0.93rem;
+            line-height: 1.7;
+        }
+
+        .note-support strong {
+            font-weight: 700;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 640px) {
+            .policy-card {
+                padding: 26px 20px;
+            }
+
+            .shipping-hero h1 {
+                font-size: 1.7rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header (kế thừa từ index.html) -->
+    <header class="vgift-header">
+        <div class="top-bar">
+            <div class="container top-content">
+                <div class="brand">
+                    <img src="images/logo.png" alt="Vgift" class="logo-img">
+                    <div class="brand-tagline">Tatste The Specialty</div>
+                </div>
+
+                <div class="header-actions">
+                    <div class="hotline">
+                        <span class="hotline-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M2.25 4.5l3.6-.9a1.5 1.5 0 0 1 1.7.9l1.6 3.8a1.5 1.5 0 0 1-.4 1.7l-1.8 1.5a12 12 0 0 0 5.4 5.4l1.5-1.8a1.5 1.5 0 0 1 1.7-.4l3.8 1.6a1.5 1.5 0 0 1 .9 1.7l-.9 3.6a1.5 1.5 0 0 1-1.5 1.1C9.3 23.1.9 14.7 1.1 5.9A1.5 1.5 0 0 1 2.25 4.5z" />
+                            </svg>
+                        </span>
+                        <div class="hotline-text">
+                            <small>Hotline</small>
+                            <strong>0865 914 715</strong>
+                        </div>
+                    </div>
+
+                    <a href="cart.html" class="cart-btn">
+                        <span class="cart-icon">🛒</span>
+                        <span class="cart-text">GIỎ HÀNG</span>
+                        <span class="cart-badge" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <div class="container nav-content">
+                <ul class="nav-left">
+                    <li class="dropdown category-trigger">
+                        <a href="#"><span class="menu-icon">☰</span> Danh mục sản phẩm <i class="fa-solid fa-angle-down" style="margin-left:5px"></i></a>
+                        <ul class="dropdown-menu">
+                            <li class="category-featured">
+                                <a href="danh-muc/set-qua-tet.html">
+                                    <span class="cat-text">Set Quà Tết 2026 – Xuân Giao Sắc</span>
+                                </a>
+                            </li>
+                            <li><a href="danh-muc/muc-kho.html"><span class="cat-text">Mực khô</span></a></li>
+                            <li><a href="danh-muc/hai-san-an-lien.html"><span class="cat-text">Hải sản ăn liền</span></a></li>
+                            <li><a href="danh-muc/bo-kho.html"><span class="cat-text">Bò khô</span></a></li>
+                            <li><a href="danh-muc/tra-ca-phe.html"><span class="cat-text">Trà &amp; Cà phê</span></a></li>
+                            <li><a href="danh-muc/banh-keo.html"><span class="cat-text">Bánh kẹo</span></a></li>
+                            <li><a href="danh-muc/qua-luu-niem.html"><span class="cat-text">Quà Lưu Niệm</span></a></li>
+                        </ul>
+
+                    </li>
+                </ul>
+
+                <ul class="nav-right">
+                    <li><a href="guide.html">Hướng Dẫn Mua</a></li>
+                    <li><a href="cart.html">Thanh Toán</a></li>
+                    <li class="active"><a href="shipping.html">Vận Chuyển</a></li>
+                    <li><a href="cam-nang.html">Cẩm Nang</a></li>
+                    <li><a href="contact.html">Liên Hệ</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="shipping-hero">
+        <span class="hero-icon">🚚</span>
+        <h1>CHÍNH SÁCH VẬN CHUYỂN</h1>
+        <p>Chúng tôi cung cấp dịch vụ giao hàng toàn quốc, nhanh chóng và tiện lợi — đảm bảo đặc sản Đà Nẵng đến tay bạn trong tình trạng tươi ngon và trọn vẹn nhất.</p>
+    </section>
+
+    <!-- Main Content -->
+    <section class="shipping-page">
+        <div class="shipping-container">
+
+            <!-- PHẦN 1: Chi phí & Thời gian -->
+            <div class="policy-card">
+                <h2>
+                    <span class="section-num">1</span>
+                    Chi phí và thời gian vận chuyển
+                </h2>
+
+                <p>Tùy theo khu vực giao hàng và giá trị đơn hàng, chúng tôi áp dụng các đơn vị vận chuyển và mức hỗ trợ phí ship khác nhau nhằm mang đến trải nghiệm mua sắm tốt nhất cho quý khách.</p>
+
+                <!-- Nội thành Đà Nẵng -->
+                <div class="zone-block">
+                    <div class="zone-title">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <strong>🏙️ Nội thành Đà Nẵng</strong>
+                    </div>
+                    <ul class="policy-list">
+                        <li>
+                            <span><strong>Hỏa tốc Shopee:</strong> Giao hàng trong <strong>1 – 2 tiếng</strong>. Phí vận chuyển theo quy định của Shopee.</span>
+                        </li>
+                        <li>
+                            <span><strong>Đơn dưới 500.000đ:</strong> Giao qua Viettel Post hoặc Grab. Phí ship theo đơn vị vận chuyển tính.</span>
+                        </li>
+                        <li>
+                            <span>
+                                <strong>Đơn từ 500.000đ – dưới 1.000.000đ:</strong> Giao qua Viettel Post Tiết Kiệm hoặc Grab, thời gian 2 – 4 ngày hoặc trong 24h.
+                                <span class="badge-free">FREESHIP</span>
+                                <span class="badge-support">Hỗ trợ 20.000đ</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <strong>Đơn từ 1.000.000đ – dưới 1.500.000đ:</strong>
+                                <span class="badge-free">FREESHIP</span>
+                                <span class="badge-support">Hỗ trợ 30.000đ</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <strong>Đơn từ 1.500.000đ – dưới 2.000.000đ:</strong>
+                                <span class="badge-free">FREESHIP</span>
+                                <span class="badge-support">Hỗ trợ 50.000đ</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <strong>Đơn từ 2.000.000đ trở lên:</strong>
+                                <span class="badge-free">FREESHIP</span>
+                                <span class="badge-support">Hỗ trợ 100.000đ</span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Toàn quốc -->
+                <div class="zone-block" style="margin-bottom: 0;">
+                    <div class="zone-title">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <strong>🗺️ Giao hàng toàn quốc</strong>
+                    </div>
+                    <ul class="policy-list">
+                        <li>
+                            <span><strong>Đơn dưới 1.000.000đ (đặt online):</strong> Giao qua Viettel Post Nhanh hoặc Hỏa tốc. Phí vận chuyển: <strong>100.000đ</strong> hoặc <strong>190.000đ/kg</strong> tùy tuyến đường.</span>
+                        </li>
+                        <li>
+                            <span>
+                                <strong>Đơn từ 1.000.000đ trở lên (đặt online) – Viettel Post Tiết Kiệm:</strong> Thời gian giao 2 – 4 ngày.
+                                <span class="badge-free">FREESHIP</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <strong>Đơn từ 1.000.000đ trở lên (đặt online) – Ship Nhanh / Hỏa tốc:</strong> Thời gian giao 1 – 2 ngày hoặc trong 24h. Phụ phí nhanh: <strong>40.000đ</strong>.
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <strong>Đơn từ 1.000.000đ trở lên (mua trực tiếp tại cửa hàng) – Viettel Post Thường:</strong> Thời gian giao 3 – 5 ngày. Phí vận chuyển: <strong>40.000đ</strong>.
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="highlight-box">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <p>Thời gian giao hàng có thể thay đổi tùy theo địa chỉ nhận hàng, tình trạng thời tiết, và lịch vận hành của đơn vị vận chuyển trong các dịp lễ, Tết. Chúng tôi sẽ thông báo kịp thời nếu có phát sinh thay đổi.</p>
+                </div>
+            </div>
+
+            <!-- PHẦN 2: Chứng từ vận chuyển -->
+            <div class="policy-card">
+                <h2>
+                    <span class="section-num">2</span>
+                    Chính sách chứng từ vận chuyển
+                </h2>
+
+                <p>Mọi sản phẩm tại <strong>Đặc Sản Đà Nẵng</strong> đều được thu mua từ các cơ sở sản xuất, hộ kinh doanh hợp pháp, có nguồn gốc rõ ràng, đảm bảo đầy đủ điều kiện lưu thông theo quy định hiện hành của pháp luật Việt Nam.</p>
+
+                <ul class="policy-list">
+                    <li>
+                        <span>Tất cả hàng hóa vận chuyển đều hợp lệ về pháp lý, đáp ứng các quy định về kiểm soát chất lượng thực phẩm và hàng hóa lưu thông trên thị trường.</span>
+                    </li>
+                    <li>
+                        <span>Chúng tôi sẵn sàng xuất trình <strong>hóa đơn bán hàng</strong>, <strong>chứng từ xuất kho</strong>, và các giấy tờ liên quan khi cơ quan chức năng hoặc khách hàng có yêu cầu kiểm tra.</span>
+                    </li>
+                    <li>
+                        <span>Khách hàng có thể yêu cầu xuất <strong>hóa đơn VAT</strong> hoặc chứng từ mua hàng để phục vụ mục đích cá nhân hoặc doanh nghiệp — chỉ cần thông báo khi đặt hàng.</span>
+                    </li>
+                    <li>
+                        <span>Chúng tôi cam kết <strong>minh bạch tuyệt đối</strong> về nguồn gốc, thành phần và thông tin sản phẩm. Mọi thông tin ghi trên bao bì đều trung thực và chính xác.</span>
+                    </li>
+                    <li>
+                        <span>Sản phẩm được đóng gói kỹ lưỡng, đảm bảo vệ sinh và an toàn thực phẩm trong quá trình vận chuyển đến tay khách hàng.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- PHẦN 3: Hỗ trợ khách hàng -->
+            <div class="policy-card">
+                <h2>
+                    <span class="section-num">3</span>
+                    Hỗ trợ khách hàng
+                </h2>
+
+                <p>Chúng tôi luôn đặt sự hài lòng của khách hàng lên hàng đầu. Nếu bạn gặp bất kỳ vấn đề nào liên quan đến đơn hàng hoặc quá trình giao nhận, đội ngũ hỗ trợ của chúng tôi sẵn sàng phản hồi trong <strong>thời gian sớm nhất</strong>.</p>
+
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <div class="ci-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="ci-info">
+                            <small>Hotline hỗ trợ</small>
+                            <strong><a href="tel:0865914715">0865 914 715</a></strong>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="ci-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="ci-info">
+                            <small>Email hỗ trợ</small>
+                            <strong><a href="mailto:danalocal.vn@gmail.com">danalocal.vn@gmail.com</a></strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="note-support">
+                    <strong>⏰ Giờ hỗ trợ:</strong> 8:00 – 22:00 hàng ngày (kể cả Thứ 7 và Chủ nhật). Các phản ánh về giao hàng thất lạc, hàng hóa bị hư hỏng trong quá trình vận chuyển sẽ được xử lý <strong>trong vòng 24 giờ</strong> kể từ khi nhận được thông báo.
+                </div>
+
+                <ul class="policy-list" style="margin-top: 20px;">
+                    <li>
+                        <span>Vui lòng <strong>kiểm tra hàng hóa trước khi ký nhận</strong>. Nếu phát hiện dấu hiệu bất thường (hàng bị vỡ, rách, biến dạng…), hãy từ chối nhận và liên hệ ngay với chúng tôi.</span>
+                    </li>
+                    <li>
+                        <span>Trường hợp hàng giao trễ so với thời gian cam kết, chúng tôi sẽ <strong>xác nhận lại trạng thái vận chuyển</strong> và hỗ trợ giải quyết nhanh nhất có thể.</span>
+                    </li>
+                    <li>
+                        <span>Đối với đơn hàng quà tặng, hãy thông báo để chúng tôi hỗ trợ <strong>đóng gói hộp quà đẹp</strong> và ghi lời chúc riêng không mất thêm phí.</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Floating Contact Icons -->
+    <div class="floating-contact">
+        <a href="https://m.me/yourpage" target="_blank" class="contact-icon messenger-icon" title="Chat với chúng tôi">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 3 .97 4.29L2 22l6.29-.97C9.95 21.61 10.97 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.41 0-2.73-.36-3.88-.99l-.28-.15-2.89.44.44-2.89-.15-.27C4.46 14.73 4 13.38 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8z" />
+                <circle cx="12" cy="12" r="1" />
+                <circle cx="7" cy="12" r="1" />
+                <circle cx="17" cy="12" r="1" />
+            </svg>
+        </a>
+        <a href="mailto:danalocal.vn@gmail.com" class="contact-icon email-icon" title="Gửi email">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+            </svg>
+        </a>
+        <a href="tel:0865914715" class="contact-icon phone-icon" title="Gọi cho chúng tôi">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+            </svg>
+        </a>
+    </div>
+
+    <!-- Toast -->
+    <div id="toast" class="toast"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content container">
+                <div class="footer-column">
+                    <h3>Đặc Sản Đà Nẵng</h3>
+                    <p>Chuyên cung cấp các sản phẩm đặc sản Đà Nẵng chất lượng cao, được chọn lọc kỹ càng từ những người làm nghề uy tín.</p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" title="Zalo"><i class="fa-solid fa-comment-dots"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column container">
+                    <h4>Về chúng tôi</h4>
+                    <ul>
+                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="#">Tin tức</a></li>
+                        <li><a href="#">Tuyển dụng</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column container">
+                    <h4>Hỗ trợ khách hàng</h4>
+                    <ul>
+                        <li><a href="#">Hướng dẫn đặt hàng</a></li>
+                        <li><a href="#">Chính sách đổi trả</a></li>
+                        <li><a href="shipping.html">Chính sách vận chuyển</a></li>
+                        <li><a href="#">Câu hỏi thường gặp</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Thông tin liên hệ</h4>
+                    <ul class="contact-info">
+                        <li><i class="fa-solid fa-location-dot"></i> 72 Đường Lê Cơ, Đà Nẵng</li>
+                        <li><i class="fa-solid fa-phone"></i> Hotline: <strong>0865 914 715</strong></li>
+                        <li><i class="fa-solid fa-envelope"></i> Email: danalocal.vn@gmail.com</li>
+                        <li><i class="fa-regular fa-clock"></i> Giờ làm việc: 8:00 - 22:00</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Đặc Sản Đà Nẵng. Bảo lưu mọi quyền.</p>
+                <div class="footer-links">
+                    <a href="#">Chính sách bảo mật</a>
+                    <a href="#">Điều khoản sử dụng</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="cursor-effects.js"></script>
+</body>
+
+</html>
