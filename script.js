@@ -167,6 +167,8 @@ function renderProductsWithPagination(list = products) {
         grid.innerHTML = '';
         if (pagination) pagination.innerHTML = '';
         if (emptyState) emptyState.style.display = 'block';
+        const countInd = document.getElementById('resultCountIndicator');
+        if(countInd) countInd.textContent = 'Không có sản phẩm nào';
         return;
     }
     if (emptyState) emptyState.style.display = 'none';
@@ -174,6 +176,13 @@ function renderProductsWithPagination(list = products) {
     const totalPages = Math.ceil(list.length / itemsPerPage);
     const start = (currentPage - 1) * itemsPerPage;
     const pageItems = list.slice(start, start + itemsPerPage);
+
+    const countInd = document.getElementById('resultCountIndicator');
+    if(countInd) {
+        let end = start + itemsPerPage;
+        if(end > list.length) end = list.length;
+        countInd.textContent = `Hiển thị ${start + 1}–${end} của ${list.length} kết quả`;
+    }
 
     grid.innerHTML = pageItems.map(product => `
         <div class="product-card" onclick="showDetail(${product.id})">
@@ -244,4 +253,155 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Initialize shop page logic if present
+    if (typeof isShopPage !== 'undefined' && isShopPage) {
+        initShopPage();
+    }
 });
+
+// ================= SHOP PAGE ADVANCED LOGIC =================
+function initShopPage() {
+    renderFavoriteSidebar();
+    
+    const maxPrice = Math.max(...products.map(p => p.price));
+    const minPriceSlider = document.getElementById('minPriceRange');
+    const maxPriceSlider = document.getElementById('maxPriceRange');
+    const priceDisplay = document.getElementById('priceRangeDisplay');
+    const sliderTrack = document.getElementById('sliderTrack');
+    
+    if (minPriceSlider && maxPriceSlider) {
+        minPriceSlider.max = maxPrice;
+        maxPriceSlider.max = maxPrice;
+        maxPriceSlider.value = maxPrice;
+        minPriceSlider.value = 0;
+        
+        function updateSlider() {
+            let minVal = parseInt(minPriceSlider.value);
+            let maxVal = parseInt(maxPriceSlider.value);
+            
+            // Prevent crossing
+            if (this.id === 'minPriceRange' && minVal > maxVal) {
+                minPriceSlider.value = maxVal;
+                minVal = maxVal;
+            }
+            if (this.id === 'maxPriceRange' && maxVal < minVal) {
+                maxPriceSlider.value = minVal;
+                maxVal = minVal;
+            }
+            
+            if (priceDisplay) {
+                priceDisplay.textContent = formatPrice(minVal) + ' – ' + formatPrice(maxVal);
+            }
+            
+            // Adjust track background
+            const percent1 = (maxPrice === 0) ? 0 : (minVal / maxPrice) * 100;
+            const percent2 = (maxPrice === 0) ? 100 : (maxVal / maxPrice) * 100;
+            if (sliderTrack) {
+                sliderTrack.style.background = `linear-gradient(to right, #e0e0e0 ${percent1}%, var(--red-main) ${percent1}%, var(--red-main) ${percent2}%, #e0e0e0 ${percent2}%)`;
+            }
+        }
+        
+        minPriceSlider.addEventListener('input', updateSlider);
+        maxPriceSlider.addEventListener('input', updateSlider);
+        updateSlider.call(maxPriceSlider); // Initial call
+    }
+    
+    applyAdvancedFilters();
+}
+
+function applyAdvancedFilters() {
+    currentPage = 1;
+    let filtered = [...products];
+
+    // Search Box Logic
+    const query = document.getElementById('searchInput')?.value?.toLowerCase();
+    if (query) {
+        filtered = filtered.filter(p => p.name.toLowerCase().includes(query) || p.category.toLowerCase().includes(query));
+    }
+
+    // Category Filter
+    const catCheckboxes = document.querySelectorAll('#categoryFilterList input:checked');
+    if (catCheckboxes.length > 0) {
+        const allowedCats = Array.from(catCheckboxes).map(cb => cb.value);
+        filtered = filtered.filter(p => allowedCats.includes(p.category));
+    }
+
+    // Price Filter
+    const minPriceVal = parseInt(document.getElementById('minPriceRange')?.value || 0);
+    const maxPriceVal = parseInt(document.getElementById('maxPriceRange')?.value || Number.MAX_SAFE_INTEGER);
+    filtered = filtered.filter(p => p.price >= minPriceVal && p.price <= maxPriceVal);
+
+    // Sorting
+    const sortVal = document.getElementById('sortSelect')?.value || 'default';
+    if (sortVal === 'price-asc') {
+        filtered.sort((a,b) => a.price - b.price);
+    } else if (sortVal === 'price-desc') {
+        filtered.sort((a,b) => b.price - a.price);
+    } else if (sortVal === 'newest') {
+        filtered.sort((a,b) => b.id - a.id);
+    } else if (sortVal === 'popular') {
+        // Just simulate sorting by a secondary attribute if available, or fake "popular" using id modulo
+        filtered.sort((a,b) => ((a.id * 7) % 10) - ((b.id * 7) % 10));
+    }
+
+    currentProductList = filtered;
+    renderProductsWithPagination(currentProductList);
+}
+
+// Intercept search products on shop page to not break advanced filters
+const originalSearchProducts = searchProducts;
+window.searchProducts = function() {
+    if (typeof isShopPage !== 'undefined' && isShopPage) {
+        applyAdvancedFilters();
+    } else {
+        originalSearchProducts();
+    }
+};
+const originalSearchInputHandler = searchInput;
+if (searchInput && typeof isShopPage !== 'undefined' && isShopPage) {
+    searchInput.addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') applyAdvancedFilters();
+    });
+}
+
+function resetAllFilters() {
+    const checkboxes = document.querySelectorAll('.shop-sidebar input[type="checkbox"]');
+    checkboxes.forEach(cb => cb.checked = false);
+    
+    const minPriceSlider = document.getElementById('minPriceRange');
+    const maxPriceSlider = document.getElementById('maxPriceRange');
+    if(minPriceSlider && maxPriceSlider) {
+        minPriceSlider.value = 0;
+        maxPriceSlider.value = maxPriceSlider.max;
+        minPriceSlider.dispatchEvent(new Event('input'));
+    }
+    
+    document.getElementById('sortSelect').value = 'default';
+    document.getElementById('searchInput').value = '';
+    
+    applyAdvancedFilters();
+}
+
+function toggleMobileFilter() {
+    const sidebar = document.getElementById('shopSidebar');
+    if (sidebar) sidebar.classList.toggle('active');
+}
+
+function renderFavoriteSidebar() {
+    const container = document.getElementById('sidebarFavorites');
+    if (!container) return;
+    
+    // Pick 4 random or top products for "favorites"
+    const favs = products.slice(0, 4); // For demonstration, just taking the first 4
+    
+    container.innerHTML = favs.map(p => `
+        <div class="sidebar-fav-item" onclick="showDetail(${p.id})">
+            <img src="${p.image}" alt="${p.name}">
+            <div class="sidebar-fav-info">
+                <h4>${p.name}</h4>
+                <div class="price">${formatPrice(p.price)}</div>
+            </div>
+        </div>
+    `).join('');
+}
