@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 
 <head>
@@ -16,38 +16,77 @@
     <header class="vgift-header cart-header">
         <div class="top-bar">
             <div class="container top-content">
-                                <div class="brand">
+                <div class="brand">
                     <a href="index.html" class="brand-link">
                         <img src="images/logo.png" alt="DanaLocal" class="logo-img">
                         <div class="brand-tagline">Taste The Specialty</div>
                     </a>
                 </div>
+
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Tìm Kiếm Sản Phẩm ...">
+                    <button onclick="searchProducts()">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+
+                <div class="header-actions">
+
+
+                    <div class="hotline">
+                        <span class="hotline-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M2.25 4.5l3.6-.9a1.5 1.5 0 0 1 1.7.9l1.6 3.8a1.5 1.5 0 0 1-.4 1.7l-1.8 1.5a12 12 0 0 0 5.4 5.4l1.5-1.8a1.5 1.5 0 0 1 1.7-.4l3.8 1.6a1.5 1.5 0 0 1 .9 1.7l-.9 3.6a1.5 1.5 0 0 1-1.5 1.1C9.3 23.1.9 14.7 1.1 5.9A1.5 1.5 0 0 1 2.25 4.5z" />
+                            </svg>
+                        </span>
+
+
+                        <div class="hotline-text">
+                            <small>Hotline</small>
+                            <strong>0865914715</strong>
+                        </div>
+                    </div>
+
+                    <a href="cart.html" class="cart-btn">
+                        <span class="cart-icon">🛒</span>
+                        <span class="cart-text">GIỎ HÀNG</span>
+                        <span class="cart-badge" id="cartCount">0</span>
+                    </a>
+                </div>
             </div>
         </div>
 
-        <nav class="main-nav cart-nav">
+        <nav class="main-nav">
             <div class="container nav-content">
                 <ul class="nav-left">
-                    <li>
-                        <a href="cart.html" class="back-shop back-shop-fancy">
-                            <span class="back-icon">
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </span>
-                            <span>Trở về giỏ hàng</span>
-                        </a>
+                    <li class="dropdown category-trigger">
+                        <a href="san-pham.html"><span class="menu-icon">☰</span> Danh mục sản phẩm <i
+                                class="fa-solid fa-angle-down" style="margin-left:5px"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="danh-muc/hai-san-an-lien.html"><span class="cat-text">Hải sản ăn
+                                        liền</span></a></li>
+                            <li><a href="danh-muc/bo-kho.html"><span class="cat-text">Bò khô</span></a></li>
+                            <li><a href="danh-muc/tra-ca-phe.html"><span class="cat-text">Trà &amp; Cà phê</span></a>
+                            </li>
+                            <li><a href="danh-muc/banh-keo.html"><span class="cat-text">Bánh kẹo</span></a></li>
+                            <li><a href="danh-muc/qua-luu-niem.html"><span class="cat-text">Quà Lưu Niệm</span></a></li>
 
+                        </ul>
 
                     </li>
                 </ul>
 
                 <ul class="nav-right">
-                    <li class="nav-highlight"><a href="index.html">SET QUÀ TẾT 2026</a></li>
                     <li><a href="san-pham.html">Tất Cả Sản Phẩm</a></li>
-                    <li><a href="guide.html">Hướng dẫn mua</a></li>
-                    <li><a href="#">Vận chuyển</a></li>
-                    <li><a href="#">Liên hệ</a></li>
+                    <li><a href="guide.html">Hướng Dẫn Mua</a></li>
+                    <li><a href="shipping.html">Vận Chuyển</a></li>
+                    <li><a href="cam-nang.html">Cẩm Nang</a></li>
+                    <li><a href="contact.html">Liên Hệ</a></li>
                 </ul>
             </div>
+
         </nav>
     </header>
 
@@ -183,7 +222,7 @@
                 <circle cx="17" cy="12" r="1" />
             </svg>
         </a>
-        <a href="mailto:info@dacsandanang.vn" class="contact-icon email-icon" title="Gửi email">
+        <a href="mailto:danalocal.vn@gmail.com" class="contact-icon email-icon" title="Gửi email">
             <svg viewBox="0 0 24 24" fill="currentColor">
                 <path
                     d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
@@ -249,9 +288,9 @@
                 <div class="footer-column">
                     <h4>Thông tin liên hệ</h4>
                     <ul class="contact-info">
-                        <li><i class="fa-solid fa-location-dot"></i> 123 Đường Lê Duẩn, Đà Nẵng</li>
-                        <li><i class="fa-solid fa-phone"></i> Hotline: <strong>0865914715</strong></li>
-                        <li><i class="fa-solid fa-envelope"></i> Email: info@dacsandanang.vn</li>
+                        <li><i class="fa-solid fa-location-dot"></i> 72 Đường Lê Cơ, Đà Nẵng</li>
+                        <li><i class="fa-solid fa-phone"></i> Hotline: <strong>0865 914 715</strong></li>
+                        <li><i class="fa-solid fa-envelope"></i> Email: danalocal.vn@gmail.com</li>
                         <li><i class="fa-regular fa-clock"></i> Giờ làm việc: 8:00 - 22:00</li>
                     </ul>
 

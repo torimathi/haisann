@@ -67,6 +67,11 @@ function renderCart() {
     const cartContent = document.getElementById('cartContent');
     const emptyCart = document.getElementById('emptyCart');
 
+    // Update header badge
+    const count = cart.reduce((total, item) => total + item.quantity, 0);
+    const cartCountEl = document.getElementById('cartCount');
+    if (cartCountEl) cartCountEl.textContent = count;
+
     if (cart.length === 0) {
         cartContent.style.display = 'none';
         emptyCart.style.display = 'block';

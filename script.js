@@ -36,7 +36,7 @@ function showToast(message) {
 }
 
 // Render products grid (basic – used internally)
-function renderProducts(productsToRender = products) {
+function renderProducts(productsToRender = (typeof products !== 'undefined' ? products : [])) {
     const grid = document.getElementById('productsGrid');
     const empty = document.getElementById('emptyState');
     if (!grid) return;
@@ -155,9 +155,9 @@ if (searchInput) {
 // Pagination
 let currentPage = 1;
 const itemsPerPage = 16;
-let currentProductList = products;
+let currentProductList = typeof products !== 'undefined' ? products : [];
 
-function renderProductsWithPagination(list = products) {
+function renderProductsWithPagination(list = (typeof products !== 'undefined' ? products : [])) {
     const grid = document.getElementById('productsGrid');
     const pagination = document.getElementById('pagination');
     const emptyState = document.getElementById('emptyState');
@@ -215,14 +215,16 @@ function goToPage(page) {
 
 // =================== INIT ===================
 // Nếu có pageCategoryFilter (set bởi trang danh mục), lọc trước khi render
-if (typeof pageCategoryFilter !== 'undefined' && pageCategoryFilter) {
-    currentProductList = pageCategoryFilter === 'all'
-        ? products
-        : products.filter(p => p.category === pageCategoryFilter);
-} else {
-    currentProductList = products;
+if (typeof products !== 'undefined') {
+    if (typeof pageCategoryFilter !== 'undefined' && pageCategoryFilter) {
+        currentProductList = pageCategoryFilter === 'all'
+            ? products
+            : products.filter(p => p.category === pageCategoryFilter);
+    } else {
+        currentProductList = products;
+    }
+    renderProductsWithPagination(currentProductList);
 }
-renderProductsWithPagination(currentProductList);
 updateCartCount();
 
 // Hero Banner Slider

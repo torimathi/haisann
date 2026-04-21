@@ -1,11 +1,12 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="vi">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cẩm Nang Đặc Sản Đà Nẵng – Bí Quyết Chọn Quà, Ẩm Thực Vùng Miền</title>
-    <meta name="description" content="Cẩm nang chọn đặc sản Đà Nẵng làm quà, kinh nghiệm mua hải sản khô, mực khô, bò khô chất lượng. Bài viết chia sẻ hữu ích từ người bán hàng thực tế.">
+    <meta name="description"
+        content="Cẩm nang chọn đặc sản Đà Nẵng làm quà, kinh nghiệm mua hải sản khô, mực khô, bò khô chất lượng. Bài viết chia sẻ hữu ích từ người bán hàng thực tế.">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -16,24 +17,39 @@
     <header class="vgift-header">
         <div class="top-bar">
             <div class="container top-content">
-                                <div class="brand">
+                <div class="brand">
                     <a href="index.html" class="brand-link">
                         <img src="images/logo.png" alt="DanaLocal" class="logo-img">
                         <div class="brand-tagline">Taste The Specialty</div>
                     </a>
                 </div>
+
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Tìm Kiếm Sản Phẩm ...">
+                    <button onclick="searchProducts()">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+
                 <div class="header-actions">
+
+
                     <div class="hotline">
                         <span class="hotline-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.25 4.5l3.6-.9a1.5 1.5 0 0 1 1.7.9l1.6 3.8a1.5 1.5 0 0 1-.4 1.7l-1.8 1.5a12 12 0 0 0 5.4 5.4l1.5-1.8a1.5 1.5 0 0 1 1.7-.4l3.8 1.6a1.5 1.5 0 0 1 .9 1.7l-.9 3.6a1.5 1.5 0 0 1-1.5 1.1C9.3 23.1.9 14.7 1.1 5.9A1.5 1.5 0 0 1 2.25 4.5z" />
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M2.25 4.5l3.6-.9a1.5 1.5 0 0 1 1.7.9l1.6 3.8a1.5 1.5 0 0 1-.4 1.7l-1.8 1.5a12 12 0 0 0 5.4 5.4l1.5-1.8a1.5 1.5 0 0 1 1.7-.4l3.8 1.6a1.5 1.5 0 0 1 .9 1.7l-.9 3.6a1.5 1.5 0 0 1-1.5 1.1C9.3 23.1.9 14.7 1.1 5.9A1.5 1.5 0 0 1 2.25 4.5z" />
                             </svg>
                         </span>
+
+
                         <div class="hotline-text">
                             <small>Hotline</small>
                             <strong>0865914715</strong>
                         </div>
                     </div>
+
                     <a href="cart.html" class="cart-btn">
                         <span class="cart-icon">🛒</span>
                         <span class="cart-text">GIỎ HÀNG</span>
@@ -47,17 +63,22 @@
             <div class="container nav-content">
                 <ul class="nav-left">
                     <li class="dropdown category-trigger">
-                        <a href="#"><span class="menu-icon">☰</span> Danh mục sản phẩm <i class="fa-solid fa-angle-down" style="margin-left:5px"></i></a>
+                        <a href="san-pham.html"><span class="menu-icon">☰</span> Danh mục sản phẩm <i
+                                class="fa-solid fa-angle-down" style="margin-left:5px"></i></a>
                         <ul class="dropdown-menu">
-                            <li class="category-featured"><a href="danh-muc/set-qua-tet.html"><span class="cat-text">Set Quà Tết 2026 – Xuân Giao Sắc</span></a></li>
-                            <li><a href="danh-muc/hai-san-an-lien.html"><span class="cat-text">Hải sản ăn liền</span></a></li>
+                            <li><a href="danh-muc/hai-san-an-lien.html"><span class="cat-text">Hải sản ăn
+                                        liền</span></a></li>
                             <li><a href="danh-muc/bo-kho.html"><span class="cat-text">Bò khô</span></a></li>
-                            <li><a href="danh-muc/tra-ca-phe.html"><span class="cat-text">Trà &amp; Cà phê</span></a></li>
+                            <li><a href="danh-muc/tra-ca-phe.html"><span class="cat-text">Trà &amp; Cà phê</span></a>
+                            </li>
                             <li><a href="danh-muc/banh-keo.html"><span class="cat-text">Bánh kẹo</span></a></li>
                             <li><a href="danh-muc/qua-luu-niem.html"><span class="cat-text">Quà Lưu Niệm</span></a></li>
+
                         </ul>
+
                     </li>
                 </ul>
+
                 <ul class="nav-right">
                     <li><a href="san-pham.html">Tất Cả Sản Phẩm</a></li>
                     <li><a href="guide.html">Hướng Dẫn Mua</a></li>
@@ -66,6 +87,7 @@
                     <li><a href="contact.html">Liên Hệ</a></li>
                 </ul>
             </div>
+
         </nav>
     </header>
 
@@ -73,7 +95,8 @@
     <section class="blog-hero">
         <span class="blog-hero-icon">📖</span>
         <h1>Cẩm Nang Đặc Sản</h1>
-        <p class="blog-hero-desc">Chia sẻ bí quyết chọn quà đặc sản Đà Nẵng, cẩm nang mua hải sản khô, hướng dẫn bảo quản và thưởng thức đúng cách để mỗi hộp quà đều trọn vẹn ý nghĩa.</p>
+        <p class="blog-hero-desc">Chia sẻ bí quyết chọn quà đặc sản Đà Nẵng, cẩm nang mua hải sản khô, hướng dẫn bảo
+            quản và thưởng thức đúng cách để mỗi hộp quà đều trọn vẹn ý nghĩa.</p>
     </section>
 
     <!-- Blog Content -->
@@ -90,133 +113,256 @@
                         <!-- Bài viết mới -->
                         <article class="blog-card">
                             <div class="blog-card-img-wrapper">
-                                <img class="blog-card-img" src="https://res.cloudinary.com/dfnlaftpz/image/upload/v1776447181/1_gzmstx.png" alt="Top 7 Quán Bánh Ép Đà Nẵng Ngon Chuẩn Vị Huế">
+                                <img class="blog-card-img"
+                                    src="https://res.cloudinary.com/dfnlaftpz/image/upload/v1776447181/1_gzmstx.png"
+                                    alt="Top 7 Quán Bánh Ép Đà Nẵng Ngon Chuẩn Vị Huế">
                             </div>
                             <div class="blog-card-body">
                                 <span class="blog-card-tag">Ăn vặt Đà Nẵng</span>
-                                <h2 class="blog-card-title">Điểm Danh 7 Quán Bánh Ép Đà Nẵng Cực Ngon Chuẩn Vị Huế Nhất Định Phải Thử</h2>
-                                <p class="blog-card-excerpt">Bánh ép là món ăn vặt khiến nhiều người mê ngay từ lần thử đầu tiên bởi lớp bánh dẻo mềm. Khám phá ngay 7 địa chỉ bánh ép ngon nhất Đà Nẵng...</p>
+                                <h2 class="blog-card-title">Điểm Danh 7 Quán Bánh Ép Đà Nẵng Cực Ngon Chuẩn Vị Huế Nhất
+                                    Định Phải Thử</h2>
+                                <p class="blog-card-excerpt">Bánh ép là món ăn vặt khiến nhiều người mê ngay từ lần thử
+                                    đầu tiên bởi lớp bánh dẻo mềm. Khám phá ngay 7 địa chỉ bánh ép ngon nhất Đà Nẵng...
+                                </p>
                                 <div class="blog-card-meta">
                                     <span><i class="fa-regular fa-calendar"></i> 18 tháng 1, 2026</span>
                                     <span><i class="fa-regular fa-clock"></i> 8 phút đọc</span>
                                 </div>
-                                <a href="quan-banh-ep-da-nang.html" class="btn-blog-read">Xem thêm <i class="fa-solid fa-arrow-right"></i></a>
+                                <a href="quan-banh-ep-da-nang.html" class="btn-blog-read">Xem thêm <i
+                                        class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </article>
 
                         <article class="blog-card">
                             <div class="blog-card-img-wrapper">
-                                <img class="blog-card-img" src="https://res.cloudinary.com/dfnlaftpz/image/upload/v1776444294/at_bai-bien-my-khe-nam-o-vi-tri-nao_06a658872db7652c3a31350eb1eec5f1_io53uh.jpg" alt="Top 10 bãi biển Đà Nẵng đẹp nổi tiếng cho du khách khám phá.">
+                                <img class="blog-card-img"
+                                    src="https://res.cloudinary.com/dfnlaftpz/image/upload/v1776444294/at_bai-bien-my-khe-nam-o-vi-tri-nao_06a658872db7652c3a31350eb1eec5f1_io53uh.jpg"
+                                    alt="Top 10 bãi biển Đà Nẵng đẹp nổi tiếng cho du khách khám phá.">
                             </div>
                             <div class="blog-card-body">
                                 <span class="blog-card-tag">Du lịch Đà Nẵng</span>
-                                <h2 class="blog-card-title">Khám Phá Top 10 Bãi Biển Đà Nẵng Đẹp Nổi Tiếng Nhất Không Nên Bỏ Lỡ</h2>
-                                <p class="blog-card-excerpt">Đà Nẵng khiến du khách say mê với những bãi biển trải dài, nước trong và khung cảnh thơ mộng. Khám phá ngay 10 bãi biển đẹp nhất thành phố đáng sống...</p>
+                                <h2 class="blog-card-title">Khám Phá Top 10 Bãi Biển Đà Nẵng Đẹp Nổi Tiếng Nhất Không
+                                    Nên Bỏ Lỡ</h2>
+                                <p class="blog-card-excerpt">Đà Nẵng khiến du khách say mê với những bãi biển trải dài,
+                                    nước trong và khung cảnh thơ mộng. Khám phá ngay 10 bãi biển đẹp nhất thành phố đáng
+                                    sống...</p>
                                 <div class="blog-card-meta">
                                     <span><i class="fa-regular fa-calendar"></i> 18 tháng 1, 2026</span>
                                     <span><i class="fa-regular fa-clock"></i> 10 phút đọc</span>
                                 </div>
-                                <a href="kham-pha-top-10-bai-bien-da-nang-dep-noi-tieng-nhat.html" class="btn-blog-read">Xem thêm <i class="fa-solid fa-arrow-right"></i></a>
+                                <a href="kham-pha-top-10-bai-bien-da-nang-dep-noi-tieng-nhat.html"
+                                    class="btn-blog-read">Xem thêm <i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </article>
 
                         <article class="blog-card">
                             <div class="blog-card-img-wrapper">
-                                <img class="blog-card-img" src="https://danviet-24h.ex-cdn.com/files/upload/1-2021/images/2021-03-22/4-1616396732-810-width629height377.jpg" alt="Cách bảo quản đặc sản Đà Nẵng đúng cách để được lâu mà vẫn ngon">
+                                <img class="blog-card-img"
+                                    src="https://danviet-24h.ex-cdn.com/files/upload/1-2021/images/2021-03-22/4-1616396732-810-width629height377.jpg"
+                                    alt="Cách bảo quản đặc sản Đà Nẵng đúng cách để được lâu mà vẫn ngon">
                             </div>
                             <div class="blog-card-body">
                                 <span class="blog-card-tag">Mẹo hay</span>
                                 <h2 class="blog-card-title">Cách Bảo Quản Đặc Sản Đà Nẵng Để Được Lâu Mà Vẫn Ngon</h2>
-                                <p class="blog-card-excerpt">Nhiều người mua đặc sản Đà Nẵng về để dùng dần hoặc làm quà, nhưng nếu bảo quản không đúng cách thì sản phẩm rất dễ giảm hương vị. Khám phá bí quyết giữ đặc sản luôn ngon...</p>
+                                <p class="blog-card-excerpt">Nhiều người mua đặc sản Đà Nẵng về để dùng dần hoặc làm
+                                    quà, nhưng nếu bảo quản không đúng cách thì sản phẩm rất dễ giảm hương vị. Khám phá
+                                    bí quyết giữ đặc sản luôn ngon...</p>
                                 <div class="blog-card-meta">
                                     <span><i class="fa-regular fa-calendar"></i> 18 tháng 1, 2026</span>
                                     <span><i class="fa-regular fa-clock"></i> 7 phút đọc</span>
                                 </div>
-                                <a href="cach-bao-quan-dac-san-da-nang-de-duoc-lau-ma-van-ngon.html" class="btn-blog-read">Xem thêm <i class="fa-solid fa-arrow-right"></i></a>
+                                <a href="cach-bao-quan-dac-san-da-nang-de-duoc-lau-ma-van-ngon.html"
+                                    class="btn-blog-read">Xem thêm <i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </article>
 
                         <article class="blog-card">
                             <div class="blog-card-img-wrapper">
-                                <img class="blog-card-img" src="https://res.cloudinary.com/dbfpktien/image/upload/q_auto/f_auto/v1776434458/m%E1%BB%9F_b%C3%A0i_jsyljq.webp" alt="Khám phá top 7 quán bánh tráng kẹp Đà Nẵng">
+                                <img class="blog-card-img"
+                                    src="https://res.cloudinary.com/dbfpktien/image/upload/q_auto/f_auto/v1776434458/m%E1%BB%9F_b%C3%A0i_jsyljq.webp"
+                                    alt="Khám phá top 7 quán bánh tráng kẹp Đà Nẵng">
                             </div>
                             <div class="blog-card-body">
                                 <span class="blog-card-tag">Ăn vặt Đà Nẵng</span>
-                                <h2 class="blog-card-title">Khám Phá Top 7 Quán Bánh Tráng Kẹp Đà Nẵng Ngon Nức Tiếng Gây Thương Nhớ</h2>
-                                <p class="blog-card-excerpt">Bánh tráng kẹp Đà Nẵng từ lâu đã trở thành "linh hồn" của ẩm thực đường phố. Khám phá ngay 7 địa chỉ quán ngon đỉnh cao với nước sốt bò khô thần thánh...</p>
+                                <h2 class="blog-card-title">Khám Phá Top 7 Quán Bánh Tráng Kẹp Đà Nẵng Ngon Nức Tiếng
+                                    Gây Thương Nhớ</h2>
+                                <p class="blog-card-excerpt">Bánh tráng kẹp Đà Nẵng từ lâu đã trở thành "linh hồn" của
+                                    ẩm thực đường phố. Khám phá ngay 7 địa chỉ quán ngon đỉnh cao với nước sốt bò khô
+                                    thần thánh...</p>
                                 <div class="blog-card-meta">
                                     <span><i class="fa-regular fa-calendar"></i> 18 tháng 1, 2026</span>
                                     <span><i class="fa-regular fa-clock"></i> 8 phút đọc</span>
                                 </div>
-                                <a href="kham-pha-top-7-quan-banh-trang-kep-da-nang-ngon-nuc-tieng.html" class="btn-blog-read">Xem thêm <i class="fa-solid fa-arrow-right"></i></a>
+                                <a href="kham-pha-top-7-quan-banh-trang-kep-da-nang-ngon-nuc-tieng.html"
+                                    class="btn-blog-read">Xem thêm <i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </article>
 
                         <!-- Bài viết 2 -->
                         <article class="blog-card">
                             <div class="blog-card-img-wrapper">
-                                <img class="blog-card-img" src="https://res.cloudinary.com/dbfpktien/image/upload/q_auto/f_auto/v1776435625/m%E1%BB%B1c_mb_yvpx0t.jpg" alt="Hướng dẫn 6 cách bảo quản mực khô đúng cách không bị mốc.">
+                                <img class="blog-card-img"
+                                    src="https://res.cloudinary.com/dbfpktien/image/upload/q_auto/f_auto/v1776435625/m%E1%BB%B1c_mb_yvpx0t.jpg"
+                                    alt="Hướng dẫn 6 cách bảo quản mực khô đúng cách không bị mốc.">
                             </div>
                             <div class="blog-card-body">
                                 <span class="blog-card-tag">Mẹo hay</span>
-                                <h2 class="blog-card-title">Mực Khô Bảo Quản Thế Nào? 6 Bí Quyết Giữ Mực Ngon Suốt 6 Tháng Từ Dana Local</h2>
-                                <p class="blog-card-excerpt">Bạn lo mực khô bị mốc hay cứng dai? Khám phá ngay 6 bí quyết bảo quản mực khô chuyên nghiệp từ Dana Local để mực luôn dẻo thơm...</p>
+                                <h2 class="blog-card-title">Mực Khô Bảo Quản Thế Nào? 6 Bí Quyết Giữ Mực Ngon Suốt 6
+                                    Tháng Từ Dana Local</h2>
+                                <p class="blog-card-excerpt">Bạn lo mực khô bị mốc hay cứng dai? Khám phá ngay 6 bí
+                                    quyết bảo quản mực khô chuyên nghiệp từ Dana Local để mực luôn dẻo thơm...</p>
                                 <div class="blog-card-meta">
                                     <span><i class="fa-regular fa-calendar"></i> 18 tháng 1, 2026</span>
                                     <span><i class="fa-regular fa-clock"></i> 6 phút đọc</span>
                                 </div>
-                                <a href="cach-bao-quan-muc-kho-giu-tron-vi-ngot.html" class="btn-blog-read">Xem thêm <i class="fa-solid fa-arrow-right"></i></a>
+                                <a href="cach-bao-quan-muc-kho-giu-tron-vi-ngot.html" class="btn-blog-read">Xem thêm <i
+                                        class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </article>
 
                         <!-- Bài viết 3 -->
                         <article class="blog-card">
                             <div class="blog-card-img-wrapper">
-                                <img class="blog-card-img" src="https://i.pinimg.com/736x/7f/ab/30/7fab3034ce51d6368fe6686d137d1529.jpg" alt="Danh sách cửa hàng đặc sản Đà Nẵng làm quà uy tín nhất.">
+                                <img class="blog-card-img"
+                                    src="https://i.pinimg.com/736x/7f/ab/30/7fab3034ce51d6368fe6686d137d1529.jpg"
+                                    alt="Danh sách cửa hàng đặc sản Đà Nẵng làm quà uy tín nhất.">
                             </div>
                             <div class="blog-card-body">
                                 <span class="blog-card-tag">Địa điểm</span>
-                                <h2 class="blog-card-title">Điểm Danh Top 5 Cửa Hàng Đặc Sản Đà Nẵng Mua Về Làm Quà Uy Tín Nhất</h2>
-                                <p class="blog-card-excerpt">Bạn đang tìm cửa hàng đặc sản Đà Nẵng uy tín? Khám phá ngay Top 5 địa chỉ bán đặc sản làm quà chất lượng, giá tốt nhất 2026...</p>
+                                <h2 class="blog-card-title">Điểm Danh Top 5 Cửa Hàng Đặc Sản Đà Nẵng Mua Về Làm Quà Uy
+                                    Tín Nhất</h2>
+                                <p class="blog-card-excerpt">Bạn đang tìm cửa hàng đặc sản Đà Nẵng uy tín? Khám phá ngay
+                                    Top 5 địa chỉ bán đặc sản làm quà chất lượng, giá tốt nhất 2026...</p>
                                 <div class="blog-card-meta">
                                     <span><i class="fa-regular fa-calendar"></i> 18 tháng 1, 2026</span>
                                     <span><i class="fa-regular fa-clock"></i> 7 phút đọc</span>
                                 </div>
-                                <a href="diem-danh-top-5-cua-hang-dac-san-da-nang-uy-tin.html" class="btn-blog-read">Xem thêm <i class="fa-solid fa-arrow-right"></i></a>
+                                <a href="diem-danh-top-5-cua-hang-dac-san-da-nang-uy-tin.html" class="btn-blog-read">Xem
+                                    thêm <i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </article>
 
                         <!-- Bài viết 4 -->
                         <article class="blog-card">
                             <div class="blog-card-img-wrapper">
-                                <img class="blog-card-img" src="https://i.pinimg.com/736x/b2/b7/91/b2b7918a62b79b49ab3b3761a02c152f.jpg" alt="Đặc sản cá bò rim Đà Nẵng đóng hũ chất lượng tại Dana Local.">
+                                <img class="blog-card-img"
+                                    src="https://i.pinimg.com/736x/b2/b7/91/b2b7918a62b79b49ab3b3761a02c152f.jpg"
+                                    alt="Đặc sản cá bò rim Đà Nẵng đóng hũ chất lượng tại Dana Local.">
                             </div>
                             <div class="blog-card-body">
                                 <span class="blog-card-tag">Sản phẩm</span>
                                 <h2 class="blog-card-title">Cá Bò Rim Đà Nẵng – Món Quà Đậm Đà Vị Biển Miền Trung</h2>
-                                <p class="blog-card-excerpt">Cá bò rim Đà Nẵng tại Dana Local được chế biến từ cá tươi, vị chua cay mặn ngọt đậm đà. Đóng hũ 250g tiện lợi...</p>
+                                <p class="blog-card-excerpt">Cá bò rim Đà Nẵng tại Dana Local được chế biến từ cá tươi,
+                                    vị chua cay mặn ngọt đậm đà. Đóng hũ 250g tiện lợi...</p>
                                 <div class="blog-card-meta">
                                     <span><i class="fa-regular fa-calendar"></i> 18 tháng 1, 2026</span>
                                     <span><i class="fa-regular fa-clock"></i> 5 phút đọc</span>
                                 </div>
-                                <a href="ca-bo-rim-da-nang-ngon-loai-1.html" class="btn-blog-read">Xem thêm <i class="fa-solid fa-arrow-right"></i></a>
+                                <a href="ca-bo-rim-da-nang-ngon-loai-1.html" class="btn-blog-read">Xem thêm <i
+                                        class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </article>
 
                         <!-- Bài viết 5 -->
                         <article class="blog-card">
                             <div class="blog-card-img-wrapper">
-                                <img class="blog-card-img" src="https://vigift.vn/wp-content/uploads/2021/12/ca-thieu-que-dac-san-da-nang-lam-qua-1.png" alt="Top 10 đặc sản Đà Nẵng dễ mang lên máy bay làm quà">
+                                <img class="blog-card-img"
+                                    src="https://vigift.vn/wp-content/uploads/2021/12/ca-thieu-que-dac-san-da-nang-lam-qua-1.png"
+                                    alt="Top 10 đặc sản Đà Nẵng dễ mang lên máy bay làm quà">
                             </div>
                             <div class="blog-card-body">
                                 <span class="blog-card-tag">Cẩm nang</span>
-                                <h2 class="blog-card-title">Top 10 Đặc Sản Đà Nẵng Dễ Mang Lên Máy Bay Làm Quà, Gọn Nhẹ Và Lịch Sự</h2>
-                                <p class="blog-card-excerpt">Gợi ý 10 đặc sản Đà Nẵng dễ mang lên máy bay, gọn nhẹ, dễ bảo quản và rất thích hợp mua về làm quà cho người thân, bạn bè...</p>
+                                <h2 class="blog-card-title">Top 10 Đặc Sản Đà Nẵng Dễ Mang Lên Máy Bay Làm Quà, Gọn Nhẹ
+                                    Và Lịch Sự</h2>
+                                <p class="blog-card-excerpt">Gợi ý 10 đặc sản Đà Nẵng dễ mang lên máy bay, gọn nhẹ, dễ
+                                    bảo quản và rất thích hợp mua về làm quà cho người thân, bạn bè...</p>
                                 <div class="blog-card-meta">
                                     <span><i class="fa-regular fa-calendar"></i> 18 tháng 1, 2026</span>
                                     <span><i class="fa-regular fa-clock"></i> 10 phút đọc</span>
                                 </div>
-                                <a href="top-10-dac-san-da-nang-de-mang-len-may-bay-lam-qua.html" class="btn-blog-read">Xem thêm <i class="fa-solid fa-arrow-right"></i></a>
+                                <a href="top-10-dac-san-da-nang-de-mang-len-may-bay-lam-qua.html"
+                                    class="btn-blog-read">Xem thêm <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <article class="blog-card">
+                            <div class="blog-card-img-wrapper">
+                                <img class="blog-card-img"
+                                    src="https://res.cloudinary.com/dhppi4z1s/image/upload/v1776698608/Đen_và_Trắng_Tối_Hiện_đại_Tối_giản_Nhiếp_ảnh_Hồ_sơ_năng_lực_Trực_tuyến_về_Nhiếp_ảnh_32_rzv9w9.png"
+                                    alt="Top 9 quán cao lầu Đà Nẵng ngon nức tiếng bạn không nên bỏ lỡ">
+                            </div>
+                            <div class="blog-card-body">
+                                <span class="blog-card-tag">Ẩm thực Đà Nẵng</span>
+                                <h2 class="blog-card-title">Top 9 Quán Cao Lầu Đà Nẵng Ngon Nức Tiếng Bạn Không Nên Bỏ
+                                    Lỡ</h2>
+                                <p class="blog-card-excerpt">Cao lầu là món ăn đặc trưng của miền Trung với sợi mì dai,
+                                    thịt xá xíu đậm đà. Khám phá ngay 9 địa chỉ quán cao lầu ngon nhất Đà Nẵng...</p>
+                                <div class="blog-card-meta">
+                                    <span><i class="fa-regular fa-calendar"></i> 21 tháng 4, 2026</span>
+                                    <span><i class="fa-regular fa-clock"></i> 9 phút đọc</span>
+                                </div>
+                                <a href="top-quan-cao-lau-da-nang-ngon.html" class="btn-blog-read">Xem thêm <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <article class="blog-card">
+                            <div class="blog-card-img-wrapper">
+                                <img class="blog-card-img"
+                                    src="https://res.cloudinary.com/dhppi4z1s/image/upload/v1776701158/Đen_và_Trắng_Tối_Hiện_đại_Tối_giản_Nhiếp_ảnh_Hồ_sơ_năng_lực_Trực_tuyến_về_Nhiếp_ảnh_37_1_borsfu.png"
+                                    alt="Khám phá 5 món bánh kẹo đặc sản Đà Nẵng ăn là ghiền">
+                            </div>
+                            <div class="blog-card-body">
+                                <span class="blog-card-tag">Đặc sản Đà Nẵng</span>
+                                <h2 class="blog-card-title">Khám Phá 5 Món Bánh Kẹo Đặc Sản Đà Nẵng Ăn Là Ghiền</h2>
+                                <p class="blog-card-excerpt">Đà Nẵng hấp dẫn du khách bởi các loại bánh kẹo đặc sản như
+                                    bánh khô mè, bánh dừa nướng. Khám phá ngay 5 món quà ý nghĩa nhất...</p>
+                                <div class="blog-card-meta">
+                                    <span><i class="fa-regular fa-calendar"></i> 21 tháng 4, 2026</span>
+                                    <span><i class="fa-regular fa-clock"></i> 7 phút đọc</span>
+                                </div>
+                                <a href="top-banh-keo-dac-san-da-nang.html" class="btn-blog-read">Xem thêm <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <article class="blog-card">
+                            <div class="blog-card-img-wrapper">
+                                <img class="blog-card-img"
+                                    src="https://res.cloudinary.com/dkiqfmhf8/image/upload/v1776701687/%C4%91%E1%BB%93i_c%E1%BB%ABu_h%E1%BA%A3i_v%C3%A2n_adeipt.jpg"
+                                    alt="Bật mí Top 5 Quán Cafe Đèo Hải Vân Đà Nẵng View đẹp">
+                            </div>
+                            <div class="blog-card-body">
+                                <span class="blog-card-tag">Du lịch Đà Nẵng</span>
+                                <h2 class="blog-card-title">Bật Mí Top 5 Quán Cafe Đèo Hải Vân Đà Nẵng View Đẹp</h2>
+                                <p class="blog-card-excerpt">Khám phá ngay Top 5 quán cafe Đèo Hải Vân với view săn mây,
+                                    ngắm biển cực chill. Điểm check-in không thể bỏ qua khi đến Đà Nẵng...</p>
+                                <div class="blog-card-meta">
+                                    <span><i class="fa-regular fa-calendar"></i> 21 tháng 4, 2026</span>
+                                    <span><i class="fa-regular fa-clock"></i> 10 phút đọc</span>
+                                </div>
+                                <a href="bat-mi-top-6-quan-cafe-deo-hai-van-da-nang-view-dep.html"
+                                    class="btn-blog-read">Xem thêm <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <article class="blog-card">
+                            <div class="blog-card-img-wrapper">
+                                <img class="blog-card-img"
+                                    src="https://res.cloudinary.com/dkiqfmhf8/image/upload/v1776702693/m%E1%BB%B1c_rim_me_dnkwhg.jpg"
+                                    alt="4 Công Thức Cách Làm Mực Khô Rim Ngon Bá Cháy">
+                            </div>
+                            <div class="blog-card-body">
+                                <span class="blog-card-tag">Món ngon</span>
+                                <h2 class="blog-card-title">4 Công Thức Cách Làm Mực Khô Rim Ngon Bá Cháy</h2>
+                                <p class="blog-card-excerpt">Hướng dẫn cách làm mực khô rim ngon tại nhà với 4 công
+                                    thức: sa tế cay, tỏi ớt, rim me và rim nước dừa cực hấp dẫn...</p>
+                                <div class="blog-card-meta">
+                                    <span><i class="fa-regular fa-calendar"></i> 21 tháng 4, 2026</span>
+                                    <span><i class="fa-regular fa-clock"></i> 12 phút đọc</span>
+                                </div>
+                                <a href="4-cong-thuc-cach-lam-muc-kho-rim-ngon.html" class="btn-blog-read">Xem thêm <i
+                                        class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </article>
                     </div>
@@ -225,7 +371,8 @@
                     <div class="blog-coming-soon">
                         <i class="fa-solid fa-pen-to-square"></i>
                         <strong>Nhiều bài viết đang được chuẩn bị...</strong><br>
-                        Chúng tôi đang viết thêm các hướng dẫn chọn quà, cẩm nang đặc sản và kinh nghiệm mua hàng. Ghé lại sớm nhé!
+                        Chúng tôi đang viết thêm các hướng dẫn chọn quà, cẩm nang đặc sản và kinh nghiệm mua hàng. Ghé
+                        lại sớm nhé!
                     </div>
                 </div>
 
@@ -234,45 +381,60 @@
                         <h3 class="sidebar-title"><i class="fa-solid fa-fire"></i> BÀI VIẾT ĐỌC NHIỀU</h3>
                         <div class="popular-posts">
                             <a href="quan-banh-ep-da-nang.html" class="popular-post-item">
-                                <img src="https://res.cloudinary.com/dfnlaftpz/image/upload/v1776447181/1_gzmstx.png" alt="7 Quán Bánh Ép Đà Nẵng" class="popular-post-img">
+                                <img src="https://res.cloudinary.com/dfnlaftpz/image/upload/v1776447181/1_gzmstx.png"
+                                    alt="7 Quán Bánh Ép Đà Nẵng" class="popular-post-img">
                                 <div class="popular-post-info">
                                     <h4>Điểm Danh 7 Quán Bánh Ép Đà Nẵng Cực Ngon Chuẩn Vị Huế</h4>
-                                    <span class="popular-post-date"><i class="fa-regular fa-calendar"></i> 18 tháng 1, 2026</span>
+                                    <span class="popular-post-date"><i class="fa-regular fa-calendar"></i> 18 tháng 1,
+                                        2026</span>
                                 </div>
                             </a>
-                            <a href="kham-pha-top-10-bai-bien-da-nang-dep-noi-tieng-nhat.html" class="popular-post-item">
-                                <img src="https://res.cloudinary.com/dfnlaftpz/image/upload/v1776448296/at_bai-bien-my-khe-nam-o-vi-tri-nao_06a658872db7652c3a31350eb1eec5f1_fnw2xk.jpg" alt="Top 10 bãi biển Đà Nẵng" class="popular-post-img">
+                            <a href="kham-pha-top-10-bai-bien-da-nang-dep-noi-tieng-nhat.html"
+                                class="popular-post-item">
+                                <img src="https://res.cloudinary.com/dfnlaftpz/image/upload/v1776448296/at_bai-bien-my-khe-nam-o-vi-tri-nao_06a658872db7652c3a31350eb1eec5f1_fnw2xk.jpg"
+                                    alt="Top 10 bãi biển Đà Nẵng" class="popular-post-img">
                                 <div class="popular-post-info">
                                     <h4>Khám Phá Top 10 Bãi Biển Đà Nẵng Đẹp Nổi Tiếng Nhất</h4>
-                                    <span class="popular-post-date"><i class="fa-regular fa-calendar"></i> 18 tháng 1, 2026</span>
+                                    <span class="popular-post-date"><i class="fa-regular fa-calendar"></i> 18 tháng 1,
+                                        2026</span>
                                 </div>
                             </a>
-                            <a href="cach-bao-quan-dac-san-da-nang-de-duoc-lau-ma-van-ngon.html" class="popular-post-item">
-                                <img src="https://danviet-24h.ex-cdn.com/files/upload/1-2021/images/2021-03-22/4-1616396732-810-width629height377.jpg" alt="Bảo quản đặc sản Đà Nẵng" class="popular-post-img">
+                            <a href="cach-bao-quan-dac-san-da-nang-de-duoc-lau-ma-van-ngon.html"
+                                class="popular-post-item">
+                                <img src="https://danviet-24h.ex-cdn.com/files/upload/1-2021/images/2021-03-22/4-1616396732-810-width629height377.jpg"
+                                    alt="Bảo quản đặc sản Đà Nẵng" class="popular-post-img">
                                 <div class="popular-post-info">
                                     <h4>Cách Bảo Quản Đặc Sản Đà Nẵng Để Được Lâu Mà Vẫn Ngon</h4>
-                                    <span class="popular-post-date"><i class="fa-regular fa-calendar"></i> 18 tháng 1, 2026</span>
+                                    <span class="popular-post-date"><i class="fa-regular fa-calendar"></i> 18 tháng 1,
+                                        2026</span>
                                 </div>
                             </a>
-                            <a href="kham-pha-top-7-quan-banh-trang-kep-da-nang-ngon-nuc-tieng.html" class="popular-post-item">
-                                <img src="https://res.cloudinary.com/dbfpktien/image/upload/q_auto/f_auto/v1776434458/m%E1%BB%9F_b%C3%A0i_jsyljq.webp" alt="Top 7 quán bánh tráng kẹp" class="popular-post-img">
+                            <a href="kham-pha-top-7-quan-banh-trang-kep-da-nang-ngon-nuc-tieng.html"
+                                class="popular-post-item">
+                                <img src="https://res.cloudinary.com/dbfpktien/image/upload/q_auto/f_auto/v1776434458/m%E1%BB%9F_b%C3%A0i_jsyljq.webp"
+                                    alt="Top 7 quán bánh tráng kẹp" class="popular-post-img">
                                 <div class="popular-post-info">
                                     <h4>Khám Phá Top 7 Quán Bánh Tráng Kẹp Đà Nẵng Ngon Nức Tiếng</h4>
-                                    <span class="popular-post-date"><i class="fa-regular fa-calendar"></i> 18 tháng 1, 2026</span>
+                                    <span class="popular-post-date"><i class="fa-regular fa-calendar"></i> 18 tháng 1,
+                                        2026</span>
                                 </div>
                             </a>
                             <a href="diem-danh-top-5-cua-hang-dac-san-da-nang-uy-tin.html" class="popular-post-item">
-                                <img src="https://i.pinimg.com/736x/7f/ab/30/7fab3034ce51d6368fe6686d137d1529.jpg" alt="Cửa hàng đặc sản uy tín" class="popular-post-img">
+                                <img src="https://i.pinimg.com/736x/7f/ab/30/7fab3034ce51d6368fe6686d137d1529.jpg"
+                                    alt="Cửa hàng đặc sản uy tín" class="popular-post-img">
                                 <div class="popular-post-info">
                                     <h4>Điểm Danh Top 5 Cửa Hàng Đặc Sản Đà Nẵng Uy Tín Chất Lượng</h4>
-                                    <span class="popular-post-date"><i class="fa-regular fa-calendar"></i> 18 tháng 1, 2026</span>
+                                    <span class="popular-post-date"><i class="fa-regular fa-calendar"></i> 18 tháng 1,
+                                        2026</span>
                                 </div>
                             </a>
                             <a href="top-10-dac-san-da-nang-de-mang-len-may-bay-lam-qua.html" class="popular-post-item">
-                                <img src="https://vigift.vn/wp-content/uploads/2021/12/ca-thieu-que-dac-san-da-nang-lam-qua-1.png" alt="Đặc sản mang lên máy bay" class="popular-post-img">
+                                <img src="https://vigift.vn/wp-content/uploads/2021/12/ca-thieu-que-dac-san-da-nang-lam-qua-1.png"
+                                    alt="Đặc sản mang lên máy bay" class="popular-post-img">
                                 <div class="popular-post-info">
                                     <h4>Top 10 Đặc Sản Đà Nẵng Để Mang Lên Máy Bay Làm Quà</h4>
-                                    <span class="popular-post-date"><i class="fa-regular fa-calendar"></i> 18 tháng 1, 2026</span>
+                                    <span class="popular-post-date"><i class="fa-regular fa-calendar"></i> 18 tháng 1,
+                                        2026</span>
                                 </div>
                             </a>
                         </div>
@@ -285,13 +447,25 @@
     <!-- Floating Contact Icons -->
     <div class="floating-contact">
         <a href="https://m.me/yourpage" target="_blank" class="contact-icon messenger-icon" title="Chat với chúng tôi">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 3 .97 4.29L2 22l6.29-.97C9.95 21.61 10.97 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.41 0-2.73-.36-3.88-.99l-.28-.15-2.89.44.44-2.89-.15-.27C4.46 14.73 4 13.38 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8z" /><circle cx="12" cy="12" r="1" /><circle cx="7" cy="12" r="1" /><circle cx="17" cy="12" r="1" /></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 3 .97 4.29L2 22l6.29-.97C9.95 21.61 10.97 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.41 0-2.73-.36-3.88-.99l-.28-.15-2.89.44.44-2.89-.15-.27C4.46 14.73 4 13.38 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8z" />
+                <circle cx="12" cy="12" r="1" />
+                <circle cx="7" cy="12" r="1" />
+                <circle cx="17" cy="12" r="1" />
+            </svg>
         </a>
         <a href="mailto:danalocal.vn@gmail.com" class="contact-icon email-icon" title="Gửi email">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" /></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+            </svg>
         </a>
         <a href="tel:0865914715" class="contact-icon phone-icon" title="Gọi cho chúng tôi">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" /></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+            </svg>
         </a>
     </div>
 
@@ -303,7 +477,8 @@
             <div class="footer-content container">
                 <div class="footer-column">
                     <h3>Đặc Sản Đà Nẵng</h3>
-                    <p>Chuyên cung cấp các sản phẩm đặc sản Đà Nẵng chất lượng cao, được chọn lọc kỹ càng từ những người làm nghề uy tín.</p>
+                    <p>Chuyên cung cấp các sản phẩm đặc sản Đà Nẵng chất lượng cao, được chọn lọc kỹ càng từ những người
+                        làm nghề uy tín.</p>
                     <div class="social-links">
                         <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>

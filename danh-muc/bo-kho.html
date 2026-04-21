@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
@@ -13,44 +13,77 @@
     <header class="vgift-header">
         <div class="top-bar">
             <div class="container top-content">
-                                <div class="brand">
+                <div class="brand">
                     <a href="../index.html" class="brand-link">
                         <img src="../images/logo.png" alt="DanaLocal" class="logo-img">
                         <div class="brand-tagline">Taste The Specialty</div>
                     </a>
                 </div>
+
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Tìm Kiếm Sản Phẩm ...">
+                    <button onclick="searchProducts()">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+
                 <div class="header-actions">
+
+
                     <div class="hotline">
-                        <span class="hotline-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.25 4.5l3.6-.9a1.5 1.5 0 0 1 1.7.9l1.6 3.8a1.5 1.5 0 0 1-.4 1.7l-1.8 1.5a12 12 0 0 0 5.4 5.4l1.5-1.8a1.5 1.5 0 0 1 1.7-.4l3.8 1.6a1.5 1.5 0 0 1 .9 1.7l-.9 3.6a1.5 1.5 0 0 1-1.5 1.1C9.3 23.1.9 14.7 1.1 5.9A1.5 1.5 0 0 1 2.25 4.5z" /></svg></span>
-                        <div class="hotline-text"><small>Hotline</small><strong>0865914715</strong></div>
+                        <span class="hotline-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M2.25 4.5l3.6-.9a1.5 1.5 0 0 1 1.7.9l1.6 3.8a1.5 1.5 0 0 1-.4 1.7l-1.8 1.5a12 12 0 0 0 5.4 5.4l1.5-1.8a1.5 1.5 0 0 1 1.7-.4l3.8 1.6a1.5 1.5 0 0 1 .9 1.7l-.9 3.6a1.5 1.5 0 0 1-1.5 1.1C9.3 23.1.9 14.7 1.1 5.9A1.5 1.5 0 0 1 2.25 4.5z" />
+                            </svg>
+                        </span>
+
+
+                        <div class="hotline-text">
+                            <small>Hotline</small>
+                            <strong>0865914715</strong>
+                        </div>
                     </div>
-                    <a href="../cart.html" class="cart-btn"><span class="cart-icon">🛒</span><span class="cart-text">GIỎ HÀNG</span><span class="cart-badge" id="cartCount">0</span></a>
+
+                    <a href="../cart.html" class="cart-btn">
+                        <span class="cart-icon">🛒</span>
+                        <span class="cart-text">GIỎ HÀNG</span>
+                        <span class="cart-badge" id="cartCount">0</span>
+                    </a>
                 </div>
             </div>
         </div>
+
         <nav class="main-nav">
             <div class="container nav-content">
                 <ul class="nav-left">
                     <li class="dropdown category-trigger">
-                        <a href="#"><span class="menu-icon">☰</span> Danh mục sản phẩm <i class="fa-solid fa-angle-down" style="margin-left:5px"></i></a>
+                        <a href="../san-pham.html"><span class="menu-icon">☰</span> Danh mục sản phẩm <i
+                                class="fa-solid fa-angle-down" style="margin-left:5px"></i></a>
                         <ul class="dropdown-menu">
-                            <li class="category-featured"><a href="set-qua-tet.html"><span class="cat-text">Set Quà Tết 2026 – Xuân Giao Sắc</span></a></li>
-                            <li><a href="hai-san-an-lien.html"><span class="cat-text">Hải sản ăn liền</span></a></li>
+                            <li><a href="hai-san-an-lien.html"><span class="cat-text">Hải sản ăn
+                                        liền</span></a></li>
                             <li><a href="bo-kho.html"><span class="cat-text">Bò khô</span></a></li>
-                            <li><a href="tra-ca-phe.html"><span class="cat-text">Trà &amp; Cà phê</span></a></li>
+                            <li><a href="tra-ca-phe.html"><span class="cat-text">Trà &amp; Cà phê</span></a>
+                            </li>
                             <li><a href="banh-keo.html"><span class="cat-text">Bánh kẹo</span></a></li>
                             <li><a href="qua-luu-niem.html"><span class="cat-text">Quà Lưu Niệm</span></a></li>
+
                         </ul>
+
                     </li>
                 </ul>
+
                 <ul class="nav-right">
-                    <li><a href="../san-pham.html">Tất Cả Sản Phẩm</a></li>
+                    <li class="active"><a href="../san-pham.html">Tất Cả Sản Phẩm</a></li>
                     <li><a href="../guide.html">Hướng Dẫn Mua</a></li>
                     <li><a href="../shipping.html">Vận Chuyển</a></li>
                     <li><a href="../cam-nang.html">Cẩm Nang</a></li>
                     <li><a href="../contact.html">Liên Hệ</a></li>
                 </ul>
             </div>
+
         </nav>
     </header>
 

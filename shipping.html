@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 
 <head>
@@ -319,14 +319,23 @@
     <header class="vgift-header">
         <div class="top-bar">
             <div class="container top-content">
-                                <div class="brand">
+                <div class="brand">
                     <a href="index.html" class="brand-link">
                         <img src="images/logo.png" alt="DanaLocal" class="logo-img">
                         <div class="brand-tagline">Taste The Specialty</div>
                     </a>
                 </div>
 
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Tìm Kiếm Sản Phẩm ...">
+                    <button onclick="searchProducts()">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+
                 <div class="header-actions">
+
+
                     <div class="hotline">
                         <span class="hotline-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
@@ -335,9 +344,11 @@
                                     d="M2.25 4.5l3.6-.9a1.5 1.5 0 0 1 1.7.9l1.6 3.8a1.5 1.5 0 0 1-.4 1.7l-1.8 1.5a12 12 0 0 0 5.4 5.4l1.5-1.8a1.5 1.5 0 0 1 1.7-.4l3.8 1.6a1.5 1.5 0 0 1 .9 1.7l-.9 3.6a1.5 1.5 0 0 1-1.5 1.1C9.3 23.1.9 14.7 1.1 5.9A1.5 1.5 0 0 1 2.25 4.5z" />
                             </svg>
                         </span>
+
+
                         <div class="hotline-text">
                             <small>Hotline</small>
-                            <strong>0865 914 715</strong>
+                            <strong>0865914715</strong>
                         </div>
                     </div>
 
@@ -354,18 +365,17 @@
             <div class="container nav-content">
                 <ul class="nav-left">
                     <li class="dropdown category-trigger">
-                        <a href="#"><span class="menu-icon">☰</span> Danh mục sản phẩm <i class="fa-solid fa-angle-down" style="margin-left:5px"></i></a>
+                        <a href="san-pham.html"><span class="menu-icon">☰</span> Danh mục sản phẩm <i
+                                class="fa-solid fa-angle-down" style="margin-left:5px"></i></a>
                         <ul class="dropdown-menu">
-                            <li class="category-featured">
-                                <a href="danh-muc/set-qua-tet.html">
-                                    <span class="cat-text">Set Quà Tết 2026 – Xuân Giao Sắc</span>
-                                </a>
-                            </li>
-                            <li><a href="danh-muc/hai-san-an-lien.html"><span class="cat-text">Hải sản ăn liền</span></a></li>
+                            <li><a href="danh-muc/hai-san-an-lien.html"><span class="cat-text">Hải sản ăn
+                                        liền</span></a></li>
                             <li><a href="danh-muc/bo-kho.html"><span class="cat-text">Bò khô</span></a></li>
-                            <li><a href="danh-muc/tra-ca-phe.html"><span class="cat-text">Trà &amp; Cà phê</span></a></li>
+                            <li><a href="danh-muc/tra-ca-phe.html"><span class="cat-text">Trà &amp; Cà phê</span></a>
+                            </li>
                             <li><a href="danh-muc/banh-keo.html"><span class="cat-text">Bánh kẹo</span></a></li>
                             <li><a href="danh-muc/qua-luu-niem.html"><span class="cat-text">Quà Lưu Niệm</span></a></li>
+
                         </ul>
 
                     </li>
@@ -379,6 +389,7 @@
                     <li><a href="contact.html">Liên Hệ</a></li>
                 </ul>
             </div>
+
         </nav>
     </header>
 

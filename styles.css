@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +7,7 @@
 }
 
 body {
-    font-family: 'Arial', 'Helvetica', sans-serif;
+    font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
     background: #f8f5f0;
     color: #333;
     line-height: 1.6;
@@ -40,7 +42,7 @@ section {
 .vgift-header {
     width: 100%;
     color: var(--text-light);
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', Arial, sans-serif;
 }
 
 /* TOP BAR - Gradient chậm hơn */
@@ -161,36 +163,7 @@ section {
     position: relative;
 }
 
-.brand::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 90px;
-    height: 90px;
-    transform: translate(-50%, -55%);
-    border-radius: 50%;
-    background: conic-gradient(from 0deg,
-            transparent,
-            rgba(255, 255, 255, 0.3),
-            /* Giảm opacity */
-            transparent,
-            rgba(255, 200, 200, 0.3),
-            transparent);
-    animation: logoRing 4s linear infinite;
-    /* Tăng từ 3s lên 4s */
-    z-index: 0;
-}
 
-@keyframes logoRing {
-    0% {
-        transform: translate(-50%, -55%) rotate(0deg);
-    }
-
-    100% {
-        transform: translate(-50%, -55%) rotate(360deg);
-    }
-}
 
 .logo-img {
     height: 64px;
@@ -2823,7 +2796,7 @@ footer {
     line-height: 1.3;
     margin-bottom: 24px;
     color: #222;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
 }
 
 
@@ -3016,7 +2989,7 @@ footer {
     font-weight: 700;
     line-height: 1.4;
     color: #c7252e;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
 }
 
 
@@ -3064,7 +3037,7 @@ footer {
 
 .summary-total span,
 .total-final span {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
     font-weight: 700;
     /* tránh 800–900 */
 }

@@ -33,6 +33,11 @@ function generateOrderCode() {
 function renderOrderSummary() {
     const cart = getCart();
     
+    // Update header badge
+    const count = cart.reduce((total, item) => total + item.quantity, 0);
+    const cartCountEl = document.getElementById('cartCount');
+    if (cartCountEl) cartCountEl.textContent = count;
+    
     if (cart.length === 0) {
         window.location.href = 'cart.html';
         return;
